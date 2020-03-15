@@ -1,1572 +1,2071 @@
-
 <!DOCTYPE html>
-<html>
+<!--[if IE 8]><html class="ie8 no-js" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9 no-js" lang="en"><![endif]-->
+<!--[if !IE]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Dashboard</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="<?=base_url()?>assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="<?=base_url()?>assets/bower_components/font-awesome/css/font-awesome.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="<?=base_url()?>assets/bower_components/Ionicons/css/ionicons.min.css">
-  <!-- jvectormap -->
-  <link rel="stylesheet" href="<?=base_url()?>assets/bower_components/jvectormap/jquery-jvectormap.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="<?=base_url()?>assets/dist/css/AdminLTE.min.css">
-  <!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="<?=base_url()?>assets/dist/css/skins/_all-skins.min.css">
+    <title>SIBARA</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- start: META -->
+    <meta charset="utf-8" />
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="Responsive Admin Template build with Twitter Bootstrap and jQuery" name="description" />
+    <meta content="ClipTheme" name="author" />
+    <!-- end: META -->
+    <!-- start: MAIN CSS -->
+    <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Raleway:400,100,200,300,500,600,700,800,900/" />
+    <link type="text/css" rel="stylesheet" href="<?=base_url()?>assets/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="<?=base_url()?>assets/bower_components/font-awesome/css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="<?=base_url()?>assets/fonts/clip-font.min.css" />
+    <link type="text/css" rel="stylesheet" href="<?=base_url()?>assets/bower_components/iCheck/skins/all.css" />
+    <link type="text/css" rel="stylesheet" href="<?=base_url()?>assets/bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css" />
+    <link type="text/css" rel="stylesheet" href="<?=base_url()?>assets/bower_components/sweetalert/dist/sweetalert.css" />
+    <link type="text/css" rel="stylesheet" href="<?=base_url()?>assets/css/main.min.css" />
+    <link type="text/css" rel="stylesheet" href="<?=base_url()?>assets/css/main-responsive.min.css" />
+    <link type="text/css" rel="stylesheet" media="print" href="<?=base_url()?>assets/css/print.min.css" />
+    <link type="text/css" rel="stylesheet" id="skin_color" href="<?=base_url()?>assets/css/theme/light.min.css" />
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="<?=base_url()?>assets/https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="<?=base_url()?>assets/https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-
-  <!-- Google Font -->
-  <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <!-- end: MAIN CSS -->
+    <!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->
+    <link href="<?=base_url()?>assets/bower_components/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet" />
+    <!-- end: CSS REQUIRED FOR THIS PAGE ONLY -->
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
 
-  <header class="main-header">
+<body>
 
-    <!-- Logo -->
-    <a href="<?=base_url()?>assets/index2.html" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
-    </a>
-
-    <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top">
-      <!-- Sidebar toggle button-->
-      <a href="<?=base_url()?>assets/#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-        <span class="sr-only">Toggle navigation</span>
-      </a>
-      <!-- Navbar Right Menu -->
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-          <!-- Messages: style can be found in dropdown.less-->
-          <li class="dropdown messages-menu">
-            <a href="<?=base_url()?>assets/#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-envelope-o"></i>
-              <span class="label label-success">4</span>
+    <!-- start: HEADER -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <!-- start: TOP NAVIGATION CONTAINER -->
+        <div class="container">
+            <div class="navbar-header">
+                <!-- start: RESPONSIVE MENU TOGGLER -->
+                <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                <span class="clip-list-2"></span>
+            </button>
+                <!-- end: RESPONSIVE MENU TOGGLER -->
+                <!-- start: LOGO -->
+                <a class="navbar-brand" href="index.html">
+                CLIP<i class="clip-clip"></i>ONE
             </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 4 messages</li>
-              <li>
-                <!-- inner menu: contains the actual data -->
-                <ul class="menu">
-                  <li><!-- start message -->
-                    <a href="<?=base_url()?>assets/#">
-                      <div class="pull-left">
-                        <img src="<?=base_url()?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        Support Team
-                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <!-- end message -->
-                  <li>
-                    <a href="<?=base_url()?>assets/#">
-                      <div class="pull-left">
-                        <img src="<?=base_url()?>assets/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        AdminLTE Design Team
-                        <small><i class="fa fa-clock-o"></i> 2 hours</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="<?=base_url()?>assets/#">
-                      <div class="pull-left">
-                        <img src="<?=base_url()?>assets/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        Developers
-                        <small><i class="fa fa-clock-o"></i> Today</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="<?=base_url()?>assets/#">
-                      <div class="pull-left">
-                        <img src="<?=base_url()?>assets/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        Sales Department
-                        <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="<?=base_url()?>assets/#">
-                      <div class="pull-left">
-                        <img src="<?=base_url()?>assets/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        Reviewers
-                        <small><i class="fa fa-clock-o"></i> 2 days</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
+                <!-- end: LOGO -->
+            </div>
+            <div class="navbar-tools">
+                <!-- start: TOP NAVIGATION MENU -->
+                <ul class="nav navbar-right">
+                    <!-- start: TO-DO DROPDOWN -->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
+                            <i class="clip-list-5"></i>
+                            <span class="badge"> 12</span>
+                        </a>
+                        <ul class="dropdown-menu todo">
+                            <li>
+                                <span class="dropdown-menu-title"> You have 12 pending tasks</span>
+                            </li>
+                            <li>
+                                <div class="drop-down-wrapper">
+                                    <ul>
+                                        <li>
+                                            <a class="todo-actions" href="javascript:void(0)">
+                                                <i class="fa fa-square-o"></i>
+                                                <span class="desc" style="opacity: 1; text-decoration: none;">Staff Meeting</span>
+                                                <span class="label label-danger" style="opacity: 1;"> today</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="todo-actions" href="javascript:void(0)">
+                                                <i class="fa fa-square-o"></i>
+                                                <span class="desc" style="opacity: 1; text-decoration: none;"> New frontend layout</span>
+                                                <span class="label label-danger" style="opacity: 1;"> today</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="todo-actions" href="javascript:void(0)">
+                                                <i class="fa fa-square-o"></i>
+                                                <span class="desc"> Hire developers</span>
+                                                <span class="label label-warning"> tommorow</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="todo-actions" href="javascript:void(0)">
+                                                <i class="fa fa-square-o"></i>
+                                                <span class="desc">Staff Meeting</span>
+                                                <span class="label label-warning"> tommorow</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="todo-actions" href="javascript:void(0)">
+                                                <i class="fa fa-square-o"></i>
+                                                <span class="desc"> New frontend layout</span>
+                                                <span class="label label-success"> this week</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="todo-actions" href="javascript:void(0)">
+                                                <i class="fa fa-square-o"></i>
+                                                <span class="desc"> Hire developers</span>
+                                                <span class="label label-success"> this week</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="todo-actions" href="javascript:void(0)">
+                                                <i class="fa fa-square-o"></i>
+                                                <span class="desc"> New frontend layout</span>
+                                                <span class="label label-info"> this month</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="todo-actions" href="javascript:void(0)">
+                                                <i class="fa fa-square-o"></i>
+                                                <span class="desc"> Hire developers</span>
+                                                <span class="label label-info"> this month</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="todo-actions" href="javascript:void(0)">
+                                                <i class="fa fa-square-o"></i>
+                                                <span class="desc" style="opacity: 1; text-decoration: none;">Staff Meeting</span>
+                                                <span class="label label-danger" style="opacity: 1;"> today</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="todo-actions" href="javascript:void(0)">
+                                                <i class="fa fa-square-o"></i>
+                                                <span class="desc" style="opacity: 1; text-decoration: none;"> New frontend layout</span>
+                                                <span class="label label-danger" style="opacity: 1;"> today</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="todo-actions" href="javascript:void(0)">
+                                                <i class="fa fa-square-o"></i>
+                                                <span class="desc"> Hire developers</span>
+                                                <span class="label label-warning"> tommorow</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="view-all">
+                                <a href="javascript:void(0)">
+                                See all tasks <i class="fa fa-arrow-circle-o-right"></i>
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- end: TO-DO DROPDOWN-->
+                    <!-- start: NOTIFICATION DROPDOWN -->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
+                            <i class="clip-notification-2"></i>
+                            <span class="badge"> 11</span>
+                        </a>
+                        <ul class="dropdown-menu notifications">
+                            <li>
+                                <span class="dropdown-menu-title"> You have 11 notifications</span>
+                            </li>
+                            <li>
+                                <div class="drop-down-wrapper">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <span class="label label-primary"><i class="fa fa-user"></i></span>
+                                                <span class="message"> New user registration</span>
+                                                <span class="time"> 1 min</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <span class="label label-success"><i class="fa fa-comment"></i></span>
+                                                <span class="message"> New comment</span>
+                                                <span class="time"> 7 min</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <span class="label label-success"><i class="fa fa-comment"></i></span>
+                                                <span class="message"> New comment</span>
+                                                <span class="time"> 8 min</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <span class="label label-success"><i class="fa fa-comment"></i></span>
+                                                <span class="message"> New comment</span>
+                                                <span class="time"> 16 min</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <span class="label label-primary"><i class="fa fa-user"></i></span>
+                                                <span class="message"> New user registration</span>
+                                                <span class="time"> 36 min</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <span class="label label-warning"><i class="fa fa-shopping-cart"></i></span>
+                                                <span class="message"> 2 items sold</span>
+                                                <span class="time"> 1 hour</span>
+                                            </a>
+                                        </li>
+                                        <li class="warning">
+                                            <a href="javascript:void(0)">
+                                                <span class="label label-danger"><i class="fa fa-user"></i></span>
+                                                <span class="message"> User deleted account</span>
+                                                <span class="time"> 2 hour</span>
+                                            </a>
+                                        </li>
+                                        <li class="warning">
+                                            <a href="javascript:void(0)">
+                                                <span class="label label-danger"><i class="fa fa-shopping-cart"></i></span>
+                                                <span class="message"> Transaction was canceled</span>
+                                                <span class="time"> 6 hour</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <span class="label label-success"><i class="fa fa-comment"></i></span>
+                                                <span class="message"> New comment</span>
+                                                <span class="time"> yesterday</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <span class="label label-primary"><i class="fa fa-user"></i></span>
+                                                <span class="message"> New user registration</span>
+                                                <span class="time"> yesterday</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <span class="label label-primary"><i class="fa fa-user"></i></span>
+                                                <span class="message"> New user registration</span>
+                                                <span class="time"> yesterday</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <span class="label label-success"><i class="fa fa-comment"></i></span>
+                                                <span class="message"> New comment</span>
+                                                <span class="time"> yesterday</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)">
+                                                <span class="label label-success"><i class="fa fa-comment"></i></span>
+                                                <span class="message"> New comment</span>
+                                                <span class="time"> yesterday</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="view-all">
+                                <a href="javascript:void(0)">
+                                See all notifications <i class="fa fa-arrow-circle-o-right"></i>
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- end: NOTIFICATION DROPDOWN -->
+                    <!-- start: MESSAGE DROPDOWN -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-close-others="true" data-hover="dropdown" data-toggle="dropdown" href="#">
+                            <i class="clip-bubble-3"></i>
+                            <span class="badge"> 9</span>
+                        </a>
+                        <ul class="dropdown-menu posts">
+                            <li>
+                                <span class="dropdown-menu-title"> You have 9 messages</span>
+                            </li>
+                            <li>
+                                <div class="drop-down-wrapper">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <div class="clearfix">
+                                                    <div class="thread-image">
+                                                        <img alt="" src="./assets/images/avatar-2.jpg">
+                                                    </div>
+                                                    <div class="thread-content">
+                                                        <span class="author">Nicole Bell</span>
+                                                        <span class="preview">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</span>
+                                                        <span class="time"> Just Now</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <div class="clearfix">
+                                                    <div class="thread-image">
+                                                        <img alt="" src="./assets/images/avatar-1.jpg">
+                                                    </div>
+                                                    <div class="thread-content">
+                                                        <span class="author">Peter Clark</span>
+                                                        <span class="preview">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</span>
+                                                        <span class="time">2 mins</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <div class="clearfix">
+                                                    <div class="thread-image">
+                                                        <img alt="" src="./assets/images/avatar-3.jpg">
+                                                    </div>
+                                                    <div class="thread-content">
+                                                        <span class="author">Steven Thompson</span>
+                                                        <span class="preview">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</span>
+                                                        <span class="time">8 hrs</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <div class="clearfix">
+                                                    <div class="thread-image">
+                                                        <img alt="" src="./assets/images/avatar-1.jpg">
+                                                    </div>
+                                                    <div class="thread-content">
+                                                        <span class="author">Peter Clark</span>
+                                                        <span class="preview">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</span>
+                                                        <span class="time">9 hrs</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">
+                                                <div class="clearfix">
+                                                    <div class="thread-image">
+                                                        <img alt="" src="./assets/images/avatar-5.jpg">
+                                                    </div>
+                                                    <div class="thread-content">
+                                                        <span class="author">Kenneth Ross</span>
+                                                        <span class="preview">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</span>
+                                                        <span class="time">14 hrs</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="view-all">
+                                <a href="pages_messages.html">
+                                See all messages <i class="fa fa-arrow-circle-o-right"></i>
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- end: MESSAGE DROPDOWN -->
+                    <!-- start: USER DROPDOWN -->
+                    <li class="dropdown current-user">
+                        <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
+                            <img src="assets/images/avatar-1-small.jpg" class="circle-img" alt="">
+                            <span class="username">Peter Clark</span>
+                            <i class="clip-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="pages_user_profile.html">
+                                    <i class="clip-user-2"></i> &nbsp;My Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pages_calendar.html">
+                                    <i class="clip-calendar"></i> &nbsp;My Calendar
+                                </a>
+                                <li>
+                                    <a href="pages_messages.html">
+                                        <i class="clip-bubble-4"></i> &nbsp;My Messages (3)
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="utility_lock_screen.html">
+                                        <i class="clip-locked"></i> &nbsp;Lock Screen
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="login_example1.html">
+                                        <i class="clip-exit"></i> &nbsp;Log Out
+                                    </a>
+                                </li>
+                        </ul>
+                        </li>
+                        <!-- end: USER DROPDOWN -->
+                        <!-- start: PAGE SIDEBAR TOGGLE -->
+                        <li>
+                            <a class="sb-toggle" href="#"><i class="fa fa-outdent"></i></a>
+                        </li>
+                        <!-- end: PAGE SIDEBAR TOGGLE -->
                 </ul>
-              </li>
-              <li class="footer"><a href="<?=base_url()?>assets/#">See All Messages</a></li>
-            </ul>
-          </li>
-          <!-- Notifications: style can be found in dropdown.less -->
-          <li class="dropdown notifications-menu">
-            <a href="<?=base_url()?>assets/#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-bell-o"></i>
-              <span class="label label-warning">10</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 10 notifications</li>
-              <li>
-                <!-- inner menu: contains the actual data -->
-                <ul class="menu">
-                  <li>
-                    <a href="<?=base_url()?>assets/#">
-                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                    </a>
-                  </li>
-                  <li>
-                    <a href="<?=base_url()?>assets/#">
-                      <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
-                      page and may cause design problems
-                    </a>
-                  </li>
-                  <li>
-                    <a href="<?=base_url()?>assets/#">
-                      <i class="fa fa-users text-red"></i> 5 new members joined
-                    </a>
-                  </li>
-                  <li>
-                    <a href="<?=base_url()?>assets/#">
-                      <i class="fa fa-shopping-cart text-green"></i> 25 sales made
-                    </a>
-                  </li>
-                  <li>
-                    <a href="<?=base_url()?>assets/#">
-                      <i class="fa fa-user text-red"></i> You changed your username
-                    </a>
-                  </li>
+                <!-- end: TOP NAVIGATION MENU -->
+            </div>
+        </div>
+        <!-- end: TOP NAVIGATION CONTAINER -->
+    </div>
+    <!-- end: HEADER -->
+    <!-- start: MAIN CONTAINER -->
+    <div class="main-container">
+        <div class="navbar-content">
+            <!-- start: SIDEBAR -->
+            <div class="main-navigation navbar-collapse collapse">
+                <!-- start: MAIN MENU TOGGLER BUTTON -->
+                <div class="navigation-toggler">
+                    <i class="clip-chevron-left"></i>
+                    <i class="clip-chevron-right"></i>
+                </div>
+                <!-- end: MAIN MENU TOGGLER BUTTON -->
+                <!-- start: MAIN NAVIGATION MENU -->
+                <ul class="main-navigation-menu">
+                    <li>
+                        <!--active open-->
+                        <a href="index.html">
+                            <i class="clip-home-3"></i>
+                            <span class="title"> Dashboard </span><span class="selected"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="clip-screen"></i>
+                            <span class="title"> Layouts </span><i class="icon-arrow"></i>
+                            <span class="selected"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="layouts_horizontal_menu1.html">
+                                    <span class="title"> Horizontal Menu </span>
+                                    <span class="badge badge-new">new</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="close-sidebar-left">
+                                    <span class="title"> Sidebar Closed </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="set-boxed-layout">
+                                    <span class="title"> Boxed Layout </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="set-footer-fixed">
+                                    <span class="title"> Footer Fixed </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../clip-one-rtl/index.html">
+                                    <span class="title"> RTL Version </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="http://www.cliptheme.com/preview/cliponeV2/Frontend/clip-one-template/clip-one/index.html" target="_blank">
+                            <i class="clip-cursor"></i>
+                            <span class="title"> Frontend Theme </span><span class="selected"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="clip-cog-2"></i>
+                            <span class="title"> UI Lab </span><i class="icon-arrow"></i>
+                            <span class="selected"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="ui_elements.html">
+                                    <span class="title"> Elements </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ui_buttons.html">
+                                    <span class="title"> Buttons &amp; icons </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ui_animations.html">
+                                    <span class="title"> CSS3 Animation </span>
+                                    <span class="badge badge-new">new</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ui_modals.html">
+                                    <span class="title"> Extended Modals </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ui_tabs_accordions.html">
+                                    <span class="title"> Tabs &amp; Accordions </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ui_sliders.html">
+                                    <span class="title"> Sliders </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ui_treeview.html">
+                                    <span class="title"> Treeview </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ui_nestable.html">
+                                    <span class="title"> Nestable List </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ui_typography.html">
+                                    <span class="title"> Typography </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="clip-grid-6"></i>
+                            <span class="title"> Tables </span><i class="icon-arrow"></i>
+                            <span class="selected"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="table_static.html">
+                                    <span class="title">Static Tables</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="table_responsive.html">
+                                    <span class="title">Responsive Tables</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="table_data.html">
+                                    <span class="title">Data Tables</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="table_export.html">
+                                    <span class="title">Table Export</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="clip-pencil"></i>
+                            <span class="title"> Forms </span><i class="icon-arrow"></i>
+                            <span class="selected"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="form_elements.html">
+                                    <span class="title">Form Elements</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="form_wizard.html">
+                                    <span class="title">Form Wizard</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="form_validation.html">
+                                    <span class="title">Form Validation</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="form_inline.html">
+                                    <span class="title">Inline Editor</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="form_x_editable.html">
+                                    <span class="title">Form X-editable</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="form_image_cropping.html">
+                                    <span class="title">Image Cropping</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="form_multiple_upload.html">
+                                    <span class="title">Multiple File Upload</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="form_dropzone.html">
+                                    <span class="title">Dropzone File Upload</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="clip-user-2"></i>
+                            <span class="title">Login</span><i class="icon-arrow"></i>
+                            <span class="selected"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="login_example1.html">
+                                    <span class="title">Login Form Example 1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="login_example2.html">
+                                    <span class="title">Login Form Example 2</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="clip-file"></i>
+                            <span class="title">Pages</span><i class="icon-arrow"></i>
+                            <span class="selected"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="pages_user_profile.html">
+                                    <span class="title">User Profile</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pages_invoice.html">
+                                    <span class="title">Invoice</span>
+                                    <span class="badge badge-new">new</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pages_gallery.html">
+                                    <span class="title">Gallery</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pages_timeline.html">
+                                    <span class="title">Timeline</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pages_calendar.html">
+                                    <span class="title">Calendar</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pages_messages.html">
+                                    <span class="title">Messages</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pages_blank_page.html">
+                                    <span class="title">Blank Page</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="clip-attachment-2"></i>
+                            <span class="title">Utility</span><i class="icon-arrow"></i>
+                            <span class="selected"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="utility_faq.html">
+                                    <span class="title">Faq</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="utility_search_result.html">
+                                    <span class="title">Search Results </span>
+                                    <span class="badge badge-new">new</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="utility_lock_screen.html">
+                                    <span class="title">Lock Screen</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="utility_404_example1.html">
+                                    <span class="title">Error 404 Example 1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="utility_404_example2.html">
+                                    <span class="title">Error 404 Example 2</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="utility_404_example3.html">
+                                    <span class="title">Error 404 Example 3</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="utility_500_example1.html">
+                                    <span class="title">Error 500 Example 1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="utility_500_example2.html">
+                                    <span class="title">Error 500 Example 2</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="utility_pricing_table.html">
+                                    <span class="title">Pricing Table</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="utility_coming_soon.html">
+                                    <span class="title">Cooming Soon</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="active">
+                            <i class="clip-folder"></i>
+                            <span class="title"> 3 Level Menu </span>
+                            <i class="icon-arrow"></i>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="javascript:;">
+                            Item 1 <i class="icon-arrow"></i>
+                        </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#">
+                                    Sample Link 1
+                                </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                    Sample Link 2
+                                </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                    Sample Link 3
+                                </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                            Item 1 <i class="icon-arrow"></i>
+                        </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#">
+                                    Sample Link 1
+                                </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                    Sample Link 1
+                                </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                    Sample Link 1
+                                </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                            Item 3
+                        </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="clip-folder-open"></i>
+                            <span class="title"> 4 Level Menu </span><i class="icon-arrow"></i>
+                            <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="javascript:;">
+                            Item 1 <i class="icon-arrow"></i>
+                        </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="javascript:;">
+                                    Sample Link 1 <i class="icon-arrow"></i>
+                                </a>
+                                        <ul class="sub-menu">
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-times"></i> Sample Link 1
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-pencil"></i> Sample Link 1
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-edit"></i> Sample Link 1
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                    Sample Link 1
+                                </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                    Sample Link 2
+                                </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                    Sample Link 3
+                                </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                            Item 2 <i class="icon-arrow"></i>
+                        </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#">
+                                    Sample Link 1
+                                </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                    Sample Link 1
+                                </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                    Sample Link 1
+                                </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                            Item 3
+                        </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="maps.html">
+                            <i class="clip-location"></i>
+                            <span class="title">Maps</span>
+                            <span class="selected"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="charts.html">
+                            <i class="clip-bars"></i>
+                            <span class="title">Charts</span>
+                            <span class="selected"></span>
+                        </a>
+                    </li>
                 </ul>
-              </li>
-              <li class="footer"><a href="<?=base_url()?>assets/#">View all</a></li>
-            </ul>
-          </li>
-          <!-- Tasks: style can be found in dropdown.less -->
-          <li class="dropdown tasks-menu">
-            <a href="<?=base_url()?>assets/#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-flag-o"></i>
-              <span class="label label-danger">9</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 9 tasks</li>
-              <li>
-                <!-- inner menu: contains the actual data -->
-                <ul class="menu">
-                  <li><!-- Task item -->
-                    <a href="<?=base_url()?>assets/#">
-                      <h3>
-                        Design some buttons
-                        <small class="pull-right">20%</small>
-                      </h3>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar"
-                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">20% Complete</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- end task item -->
-                  <li><!-- Task item -->
-                    <a href="<?=base_url()?>assets/#">
-                      <h3>
-                        Create a nice theme
-                        <small class="pull-right">40%</small>
-                      </h3>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar"
-                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">40% Complete</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- end task item -->
-                  <li><!-- Task item -->
-                    <a href="<?=base_url()?>assets/#">
-                      <h3>
-                        Some task I need to do
-                        <small class="pull-right">60%</small>
-                      </h3>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar"
-                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">60% Complete</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- end task item -->
-                  <li><!-- Task item -->
-                    <a href="<?=base_url()?>assets/#">
-                      <h3>
-                        Make beautiful transitions
-                        <small class="pull-right">80%</small>
-                      </h3>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar"
-                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">80% Complete</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- end task item -->
-                </ul>
-              </li>
-              <li class="footer">
-                <a href="<?=base_url()?>assets/#">View all tasks</a>
-              </li>
-            </ul>
-          </li>
-          <!-- User Account: style can be found in dropdown.less -->
-          <li class="dropdown user user-menu">
-            <a href="<?=base_url()?>assets/#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="<?=base_url()?>assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
-            </a>
-            <ul class="dropdown-menu">
-              <!-- User image -->
-              <li class="user-header">
-                <img src="<?=base_url()?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <!-- end: MAIN NAVIGATION MENU -->
+            </div>
+            <!-- end: SIDEBAR -->
+        </div>
 
-                <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
-                </p>
-              </li>
-              <!-- Menu Body -->
-              <li class="user-body">
+        <!-- start: PAGE -->
+        <div class="main-content">
+            <!-- start: PANEL CONFIGURATION MODAL FORM -->
+            <div class="modal fade" id="panel-config" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                            <h4 class="modal-title">Panel Configuration</h4>
+                        </div>
+                        <div class="modal-body">
+                            Here will be a configuration form
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                </button>
+                            <button type="button" class="btn btn-primary">
+                    Save changes
+                </button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- /.modal -->
+            <!-- end: SPANEL CONFIGURATION MODAL FORM -->
+            <div class="container">
+                <!-- start: PAGE HEADER -->
                 <div class="row">
-                  <div class="col-xs-4 text-center">
-                    <a href="<?=base_url()?>assets/#">Followers</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="<?=base_url()?>assets/#">Sales</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="<?=base_url()?>assets/#">Friends</a>
-                  </div>
+                    <div class="col-sm-12">
+                        <!-- start: STYLE SELECTOR BOX -->
+                        <div id="style_selector" class="hidden-xs close-style">
+                            <div id="style_selector_container" style="display:block">
+                                <div class="style-main-title">
+                                    Style Selector
+                                </div>
+                                <div class="box-title">
+                                    Choose Your Layout Style
+                                </div>
+                                <div class="input-box">
+                                    <div class="input">
+                                        <select name="layout">
+                    <option value="default">Wide</option>
+                    <option value="boxed">Boxed</option>
+                </select>
+                                    </div>
+                                </div>
+                                <div class="box-title">
+                                    Choose Your Orientation
+                                </div>
+                                <div class="input-box">
+                                    <div class="input">
+                                        <select name="orientation">
+                    <option value="default">Default</option>
+                    <option value="rtl">RTL</option>
+                </select>
+                                    </div>
+                                </div>
+                                <div class="box-title">
+                                    Choose Your Header Style
+                                </div>
+                                <div class="input-box">
+                                    <div class="input">
+                                        <select name="header">
+                    <option value="fixed">Fixed</option>
+                    <option value="default">Default</option>
+                </select>
+                                    </div>
+                                </div>
+                                <div class="box-title">
+                                    Choose Your Footer Style
+                                </div>
+                                <div class="input-box">
+                                    <div class="input">
+                                        <select name="footer">
+                    <option value="default">Default</option>
+                    <option value="fixed">Fixed</option>
+                </select>
+                                    </div>
+                                </div>
+                                <div class="box-title">
+                                    Backgrounds for Boxed Version
+                                </div>
+                                <div class="images boxed-patterns">
+                                    <a id="bg_style_1" href="#"><img alt="" src="assets/images/bg.png"></a>
+                                    <a id="bg_style_2" href="#"><img alt="" src="assets/images/bg_2.png"></a>
+                                    <a id="bg_style_3" href="#"><img alt="" src="assets/images/bg_3.png"></a>
+                                    <a id="bg_style_4" href="#"><img alt="" src="assets/images/bg_4.png"></a>
+                                    <a id="bg_style_5" href="#"><img alt="" src="assets/images/bg_5.png"></a>
+                                </div>
+                                <div class="box-title">
+                                    5 Predefined Color Schemes
+                                </div>
+                                <div class="images icons-color">
+                                    <a id="light" href="#"><img class="active" alt="" src="assets/images/lightgrey.png"></a>
+                                    <a id="dark" href="#"><img alt="" src="assets/images/darkgrey.png"></a>
+                                    <a id="black-and-white" href="#"><img alt="" src="assets/images/blackandwhite.png"></a>
+                                    <a id="navy" href="#"><img alt="" src="assets/images/navy.png"></a>
+                                    <a id="green" href="#"><img alt="" src="assets/images/green.png"></a>
+                                </div>
+                                <div style="height:25px;line-height:25px; text-align: center">
+                                    <a class="clear_style" href="#">
+                Clear Styles
+            </a>
+                                    <a class="save_style" href="#">
+                Save Styles
+            </a>
+                                </div>
+                            </div>
+                            <div class="style-toggle open">
+                                <i class="fa fa-cog fa-spin"></i>
+                            </div>
+                        </div>
+                        <!-- end: STYLE SELECTOR BOX -->
+                        <!-- start: PAGE TITLE & BREADCRUMB -->
+                        <ol class="breadcrumb">
+                            <li>
+                                <i class="clip-home-3"></i>
+                                <a href="#">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="active">
+                                Dashboard
+                            </li>
+                            <li class="search-box">
+                                <form class="sidebar-search">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Start Searching...">
+                                        <button class="submit">
+                                            <i class="clip-search-3"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </li>
+                        </ol>
+                        <div class="page-header">
+                            <h1>Dashboard <small>overview &amp; stats </small></h1>
+                        </div>
+                        <!-- end: PAGE TITLE & BREADCRUMB -->
+                    </div>
                 </div>
-                <!-- /.row -->
-              </li>
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="<?=base_url()?>assets/#" class="btn btn-default btn-flat">Profile</a>
+                <!-- end: PAGE HEADER -->
+                <!-- start: PAGE CONTENT -->
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="core-box">
+                            <div class="heading">
+                                <i class="clip-user-4 circle-icon circle-green"></i>
+                                <h2>Manage Users</h2>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                            </div>
+                            <a class="view-more" href="#">
+                                View More <i class="clip-arrow-right-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="core-box">
+                            <div class="heading">
+                                <i class="clip-clip circle-icon circle-teal"></i>
+                                <h2>Manage Orders</h2>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                            </div>
+                            <a class="view-more" href="#">
+                                View More <i class="clip-arrow-right-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="core-box">
+                            <div class="heading">
+                                <i class="clip-database circle-icon circle-bricky"></i>
+                                <h2>Manage Data</h2>
+                            </div>
+                            <div class="content">
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                            </div>
+                            <a class="view-more" href="#">
+                                View More <i class="clip-arrow-right-2"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="pull-right">
-                  <a href="<?=base_url()?>assets/#" class="btn btn-default btn-flat">Sign out</a>
+                <div class="row">
+                    <div class="col-sm-7">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <i class="clip-stats"></i> Site Visits
+                                <div class="panel-tools">
+                                    <a class="btn btn-xs btn-link panel-collapse collapses" href="#">
+                                    </a>
+                                    <a class="btn btn-xs btn-link panel-config" href="#panel-config" data-toggle="modal">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <a class="btn btn-xs btn-link panel-refresh" href="#">
+                                        <i class="fa fa-refresh"></i>
+                                    </a>
+                                    <a class="btn btn-xs btn-link panel-close" href="#">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="flot-medium-container">
+                                    <div id="placeholder-h1" class="flot-placeholder"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <i class="clip-pie"></i> Acquisition
+                                        <div class="panel-tools">
+                                            <a class="btn btn-xs btn-link panel-collapse collapses" href="#">
+                                            </a>
+                                            <a class="btn btn-xs btn-link panel-config" href="#panel-config" data-toggle="modal">
+                                                <i class="fa fa-wrench"></i>
+                                            </a>
+                                            <a class="btn btn-xs btn-link panel-refresh" href="#">
+                                                <i class="fa fa-refresh"></i>
+                                            </a>
+                                            <a class="btn btn-xs btn-link panel-close" href="#">
+                                                <i class="fa fa-times"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="flot-mini-container">
+                                            <div id="placeholder-h2" class="flot-placeholder"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <i class="clip-bars"></i> Pageviews real-time
+                                        <div class="panel-tools">
+                                            <a class="btn btn-xs btn-link panel-collapse collapses" href="#">
+                                            </a>
+                                            <a class="btn btn-xs btn-link panel-config" href="#panel-config" data-toggle="modal">
+                                                <i class="fa fa-wrench"></i>
+                                            </a>
+                                            <a class="btn btn-xs btn-link panel-refresh" href="#">
+                                                <i class="fa fa-refresh"></i>
+                                            </a>
+                                            <a class="btn btn-xs btn-link panel-close" href="#">
+                                                <i class="fa fa-times"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="flot-mini-container">
+                                            <div id="placeholder-h3" class="flot-placeholder"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </li>
+                <div class="row">
+                    <div class="col-sm-7">
+                        <div class="row space12">
+                            <ul class="mini-stats col-sm-12">
+                                <li class="col-sm-4">
+                                    <div class="sparkline_bar_good">
+                                        <span>3,5,9,8,13,11,14</span>+10%
+                                    </div>
+                                    <div class="values">
+                                        <strong>18304</strong> Visits
+                                    </div>
+                                </li>
+                                <li class="col-sm-4">
+                                    <div class="sparkline_bar_neutral">
+                                        <span>20,15,18,14,10,12,15,20</span>0%
+                                    </div>
+                                    <div class="values">
+                                        <strong>3833</strong> Unique Visitors
+                                    </div>
+                                </li>
+                                <li class="col-sm-4">
+                                    <div class="sparkline_bar_bad">
+                                        <span>4,6,10,8,12,21,11</span>+50%
+                                    </div>
+                                    <div class="values">
+                                        <strong>18304</strong> Pageviews
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="row space12">
+                            <div class="col-sm-6">
+                                <div class="easy-pie-chart">
+                                    <span class="bounce number" data-percent="44"> <span class="percent">44</span> </span>
+                                    <div class="label-chart">
+                                        Bounce Rate
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="easy-pie-chart">
+                                    <span class="cpu number" data-percent="82"> <span class="percent">82</span> </span>
+                                    <div class="label-chart">
+                                        New Visits
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-7">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <i class="clip-users-2"></i> Users
+                                <div class="panel-tools">
+                                    <a class="btn btn-xs btn-link panel-collapse collapses" href="#">
+                                    </a>
+                                    <a class="btn btn-xs btn-link panel-config" href="#panel-config" data-toggle="modal">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <a class="btn btn-xs btn-link panel-refresh" href="#">
+                                        <i class="fa fa-refresh"></i>
+                                    </a>
+                                    <a class="btn btn-xs btn-link panel-close" href="#">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="panel-body panel-scroll" style="height:300px">
+                                <table class="table table-striped table-hover" id="sample-table-1">
+                                    <thead>
+                                        <tr>
+                                            <th class="center">Photo</th>
+                                            <th>Full Name</th>
+                                            <th class="hidden-xs">Email</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="center"><img src="assets/images/avatar-1.jpg" alt="image" /></td>
+                                            <td>Peter Clark</td>
+                                            <td class="hidden-xs">
+                                                <a href="#" rel="nofollow" target="_blank">
+                                                    peter@example.com
+                                                </a>
+                                            </td>
+                                            <td class="center">
+                                                <div>
+                                                    <div class="btn-group">
+                                                        <a class="btn btn-primary dropdown-toggle btn-sm" data-toggle="dropdown" href="#">
+                                                            <i class="fa fa-cog"></i> <span class="caret"></span>
+                                                        </a>
+                                                        <ul role="menu" class="dropdown-menu pull-right">
+                                                            <li role="presentation">
+                                                                <a role="menuitem" tabindex="-1" href="#">
+                                                                    <i class="fa fa-edit"></i> Edit
+                                                                </a>
+                                                            </li>
+                                                            <li role="presentation">
+                                                                <a role="menuitem" tabindex="-1" href="#">
+                                                                    <i class="fa fa-share"></i> Share
+                                                                </a>
+                                                            </li>
+                                                            <li role="presentation">
+                                                                <a role="menuitem" tabindex="-1" href="#">
+                                                                    <i class="fa fa-times"></i> Remove
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center"><img src="assets/images/avatar-2.jpg" alt="image" /></td>
+                                            <td>Nicole Bell</td>
+                                            <td class="hidden-xs">
+                                                <a href="#" rel="nofollow" target="_blank">
+                                                    nicole@example.com
+                                                </a>
+                                            </td>
+                                            <td class="center">
+                                                <div>
+                                                    <div class="btn-group">
+                                                        <a class="btn btn-primary dropdown-toggle btn-sm" data-toggle="dropdown" href="#">
+                                                            <i class="fa fa-cog"></i> <span class="caret"></span>
+                                                        </a>
+                                                        <ul role="menu" class="dropdown-menu pull-right">
+                                                            <li role="presentation">
+                                                                <a role="menuitem" tabindex="-1" href="#">
+                                                                    <i class="fa fa-edit"></i> Edit
+                                                                </a>
+                                                            </li>
+                                                            <li role="presentation">
+                                                                <a role="menuitem" tabindex="-1" href="#">
+                                                                    <i class="fa fa-share"></i> Share
+                                                                </a>
+                                                            </li>
+                                                            <li role="presentation">
+                                                                <a role="menuitem" tabindex="-1" href="#">
+                                                                    <i class="fa fa-times"></i> Remove
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center"><img src="assets/images/avatar-3.jpg" alt="image" /></td>
+                                            <td>Steven Thompson</td>
+                                            <td class="hidden-xs">
+                                                <a href="#" rel="nofollow" target="_blank">
+                                                    steven@example.com
+                                                </a>
+                                            </td>
+                                            <td class="center">
+                                                <div>
+                                                    <div class="btn-group">
+                                                        <a class="btn btn-primary dropdown-toggle btn-sm" data-toggle="dropdown" href="#">
+                                                            <i class="fa fa-cog"></i> <span class="caret"></span>
+                                                        </a>
+                                                        <ul role="menu" class="dropdown-menu pull-right">
+                                                            <li role="presentation">
+                                                                <a role="menuitem" tabindex="-1" href="#">
+                                                                    <i class="fa fa-edit"></i> Edit
+                                                                </a>
+                                                            </li>
+                                                            <li role="presentation">
+                                                                <a role="menuitem" tabindex="-1" href="#">
+                                                                    <i class="fa fa-share"></i> Share
+                                                                </a>
+                                                            </li>
+                                                            <li role="presentation">
+                                                                <a role="menuitem" tabindex="-1" href="#">
+                                                                    <i class="fa fa-times"></i> Remove
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center"><img src="assets/images/avatar-5.jpg" alt="image" /></td>
+                                            <td>Kenneth Ross</td>
+                                            <td class="hidden-xs">
+                                                <a href="#" rel="nofollow" target="_blank">
+                                                    kenneth@example.com
+                                                </a>
+                                            </td>
+                                            <td class="center">
+                                                <div>
+                                                    <div class="btn-group">
+                                                        <a class="btn btn-primary dropdown-toggle btn-sm" data-toggle="dropdown" href="#">
+                                                            <i class="fa fa-cog"></i> <span class="caret"></span>
+                                                        </a>
+                                                        <ul role="menu" class="dropdown-menu pull-right">
+                                                            <li role="presentation">
+                                                                <a role="menuitem" tabindex="-1" href="#">
+                                                                    <i class="fa fa-edit"></i> Edit
+                                                                </a>
+                                                            </li>
+                                                            <li role="presentation">
+                                                                <a role="menuitem" tabindex="-1" href="#">
+                                                                    <i class="fa fa-share"></i> Share
+                                                                </a>
+                                                            </li>
+                                                            <li role="presentation">
+                                                                <a role="menuitem" tabindex="-1" href="#">
+                                                                    <i class="fa fa-times"></i> Remove
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center"><img src="assets/images/avatar-4.jpg" alt="image" /></td>
+                                            <td>Ella Patterson</td>
+                                            <td class="hidden-xs">
+                                                <a href="#" rel="nofollow" target="_blank">
+                                                    ella@example.com
+                                                </a>
+                                            </td>
+                                            <td class="center">
+                                                <div>
+                                                    <div class="btn-group">
+                                                        <a class="btn btn-primary dropdown-toggle btn-sm" data-toggle="dropdown" href="#">
+                                                            <i class="fa fa-cog"></i> <span class="caret"></span>
+                                                        </a>
+                                                        <ul role="menu" class="dropdown-menu pull-right">
+                                                            <li role="presentation">
+                                                                <a role="menuitem" tabindex="-1" href="#">
+                                                                    <i class="fa fa-edit"></i> Edit
+                                                                </a>
+                                                            </li>
+                                                            <li role="presentation">
+                                                                <a role="menuitem" tabindex="-1" href="#">
+                                                                    <i class="fa fa-share"></i> Share
+                                                                </a>
+                                                            </li>
+                                                            <li role="presentation">
+                                                                <a role="menuitem" tabindex="-1" href="#">
+                                                                    <i class="fa fa-times"></i> Remove
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <i class="clip-checkbox"></i> To Do
+                                <div class="panel-tools">
+                                    <a class="btn btn-xs btn-link panel-collapse collapses" href="#">
+                                    </a>
+                                    <a class="btn btn-xs btn-link panel-config" href="#panel-config" data-toggle="modal">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <a class="btn btn-xs btn-link panel-refresh" href="#">
+                                        <i class="fa fa-refresh"></i>
+                                    </a>
+                                    <a class="btn btn-xs btn-link panel-close" href="#">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="panel-body panel-scroll" style="height:300px">
+                                <ul class="todo">
+                                    <li>
+                                        <a class="todo-actions" href="javascript:void(0)">
+                                            <i class="fa fa-square-o"></i>
+                                            <span class="desc" style="opacity: 1; text-decoration: none;">Staff Meeting</span>
+                                            <span class="label label-danger" style="opacity: 1;"> today</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="todo-actions" href="javascript:void(0)">
+                                            <i class="fa fa-square-o"></i>
+                                            <span class="desc" style="opacity: 1; text-decoration: none;"> New frontend layout</span>
+                                            <span class="label label-danger" style="opacity: 1;"> today</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="todo-actions" href="javascript:void(0)">
+                                            <i class="fa fa-square-o"></i>
+                                            <span class="desc"> Hire developers</span>
+                                            <span class="label label-warning"> tommorow</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="todo-actions" href="javascript:void(0)">
+                                            <i class="fa fa-square-o"></i>
+                                            <span class="desc">Staff Meeting</span>
+                                            <span class="label label-warning"> tommorow</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="todo-actions" href="javascript:void(0)">
+                                            <i class="fa fa-square-o"></i>
+                                            <span class="desc"> New frontend layout</span>
+                                            <span class="label label-success"> this week</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="todo-actions" href="javascript:void(0)">
+                                            <i class="fa fa-square-o"></i>
+                                            <span class="desc"> Hire developers</span>
+                                            <span class="label label-success"> this week</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="todo-actions" href="javascript:void(0)">
+                                            <i class="fa fa-square-o"></i>
+                                            <span class="desc"> New frontend layout</span>
+                                            <span class="label label-info"> this month</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="todo-actions" href="javascript:void(0)">
+                                            <i class="fa fa-square-o"></i>
+                                            <span class="desc"> Hire developers</span>
+                                            <span class="label label-info"> this month</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="todo-actions" href="javascript:void(0)">
+                                            <i class="fa fa-square-o"></i>
+                                            <span class="desc" style="opacity: 1; text-decoration: none;">Staff Meeting</span>
+                                            <span class="label label-danger" style="opacity: 1;"> today</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="todo-actions" href="javascript:void(0)">
+                                            <i class="fa fa-square-o"></i>
+                                            <span class="desc" style="opacity: 1; text-decoration: none;"> New frontend layout</span>
+                                            <span class="label label-danger" style="opacity: 1;"> today</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="todo-actions" href="javascript:void(0)">
+                                            <i class="fa fa-square-o"></i>
+                                            <span class="desc"> Hire developers</span>
+                                            <span class="label label-warning"> tommorow</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-7">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <i class="clip-calendar"></i> Calendar
+                                <div class="panel-tools">
+                                    <a class="btn btn-xs btn-link panel-collapse collapses" href="#">
+                                    </a>
+                                    <a class="btn btn-xs btn-link panel-config" href="#panel-config" data-toggle="modal">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <a class="btn btn-xs btn-link panel-refresh" href="#">
+                                        <i class="fa fa-refresh"></i>
+                                    </a>
+                                    <a class="btn btn-xs btn-link panel-expand" href="#">
+                                        <i class="fa fa-resize-full"></i>
+                                    </a>
+                                    <a class="btn btn-xs btn-link panel-close" href="#">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div id='calendar'></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <i class="clip-bubble-4"></i> Chats
+                                        <div class="panel-tools">
+                                            <a class="btn btn-xs btn-link panel-collapse collapses" href="#">
+                                            </a>
+                                            <a class="btn btn-xs btn-link panel-config" href="#panel-config" data-toggle="modal">
+                                                <i class="fa fa-wrench"></i>
+                                            </a>
+                                            <a class="btn btn-xs btn-link panel-refresh" href="#">
+                                                <i class="fa fa-refresh"></i>
+                                            </a>
+                                            <a class="btn btn-xs btn-link panel-expand" href="#">
+                                                <i class="fa fa-resize-full"></i>
+                                            </a>
+                                            <a class="btn btn-xs btn-link panel-close" href="#">
+                                                <i class="fa fa-times"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body panel-scroll" style="height:460px">
+                                        <ol class="discussion">
+                                            <li class="other">
+                                                <div class="avatar">
+                                                    <img alt="" src="assets/images/avatar-4.jpg">
+                                                </div>
+                                                <div class="messages">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                                    </p>
+                                                    <span class="time"> 51 min </span>
+                                                </div>
+                                            </li>
+                                            <li class="self">
+                                                <div class="avatar">
+                                                    <img alt="" src="assets/images/avatar-1.jpg">
+                                                </div>
+                                                <div class="messages">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                                    </p>
+                                                    <span class="time"> 37 mins </span>
+                                                </div>
+                                            </li>
+                                            <li class="other">
+                                                <div class="avatar">
+                                                    <img alt="" src="assets/images/avatar-3.jpg">
+                                                </div>
+                                                <div class="messages">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="self">
+                                                <div class="avatar">
+                                                    <img alt="" src="assets/images/avatar-1.jpg">
+                                                </div>
+                                                <div class="messages">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li class="other">
+                                                <div class="avatar">
+                                                    <img alt="" src="assets/images/avatar-4.jpg">
+                                                </div>
+                                                <div class="messages">
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                                    </p>
+                                                </div>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="chat-form">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control input-mask-date" placeholder="Type a message here...">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-teal" type="button">
+                                                <i class="fa fa-check"></i>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end: PAGE CONTENT-->
+            </div>
+        </div>
+        <!-- end: PAGE -->
+    </div>
+    <!-- end: MAIN CONTAINER -->
+    <!-- start: FOOTER -->
+    <div class="footer clearfix">
+        <div class="footer-inner">
+            <script>
+                document.write(new Date().getFullYear())
+            </script> &copy; clip-one by cliptheme.
+        </div>
+        <div class="footer-items">
+            <span class="go-top"><i class="clip-chevron-up"></i></span>
+        </div>
+    </div>
+    <!-- end: FOOTER -->
+    <!-- start: RIGHT SIDEBAR -->
+    <div id="page-sidebar">
+        <a class="sidebar-toggler sb-toggle" href="#"><i class="fa fa-indent"></i></a>
+        <div class="sidebar-wrapper">
+            <ul class="nav nav-tabs nav-justified" id="sidebar-tab">
+                <li class="active">
+                    <a href="#users" role="tab" data-toggle="tab"><i class="fa fa-users"></i></a>
+                </li>
+                <li>
+                    <a href="#favorites" role="tab" data-toggle="tab"><i class="fa fa-heart"></i></a>
+                </li>
+                <li>
+                    <a href="#settings" role="tab" data-toggle="tab"><i class="fa fa-gear"></i></a>
+                </li>
             </ul>
-          </li>
-          <!-- Control Sidebar Toggle Button -->
-          <li>
-            <a href="<?=base_url()?>assets/#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-          </li>
-        </ul>
-      </div>
-
-    </nav>
-  </header>
-  <!-- Left side column. contains the logo and sidebar -->
-  <aside class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
-      <!-- Sidebar user panel -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="<?=base_url()?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-        </div>
-        <div class="pull-left info">
-          <p>Alexander Pierce</p>
-          <a href="<?=base_url()?>assets/#"><i class="fa fa-circle text-success"></i> Online</a>
-        </div>
-      </div>
-      <!-- search form -->
-      <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-          <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat">
-                  <i class="fa fa-search"></i>
-                </button>
-              </span>
-        </div>
-      </form>
-      <!-- /.search form -->
-      <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">MAIN NAVIGATION</li>
-        <li class="active treeview menu-open">
-          <a href="<?=base_url()?>assets/#">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="<?=base_url()?>assets/index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li class="active"><a href="<?=base_url()?>assets/index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="<?=base_url()?>assets/#">
-            <i class="fa fa-files-o"></i>
-            <span>Layout Options</span>
-            <span class="pull-right-container">
-              <span class="label label-primary pull-right">4</span>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="<?=base_url()?>assets/pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-            <li><a href="<?=base_url()?>assets/pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-            <li><a href="<?=base_url()?>assets/pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-            <li><a href="<?=base_url()?>assets/pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="<?=base_url()?>assets/pages/widgets.html">
-            <i class="fa fa-th"></i> <span>Widgets</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-green">new</small>
-            </span>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="<?=base_url()?>assets/#">
-            <i class="fa fa-pie-chart"></i>
-            <span>Charts</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="<?=base_url()?>assets/pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-            <li><a href="<?=base_url()?>assets/pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-            <li><a href="<?=base_url()?>assets/pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-            <li><a href="<?=base_url()?>assets/pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="<?=base_url()?>assets/#">
-            <i class="fa fa-laptop"></i>
-            <span>UI Elements</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="<?=base_url()?>assets/pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
-            <li><a href="<?=base_url()?>assets/pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
-            <li><a href="<?=base_url()?>assets/pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
-            <li><a href="<?=base_url()?>assets/pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
-            <li><a href="<?=base_url()?>assets/pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
-            <li><a href="<?=base_url()?>assets/pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="<?=base_url()?>assets/#">
-            <i class="fa fa-edit"></i> <span>Forms</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="<?=base_url()?>assets/pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-            <li><a href="<?=base_url()?>assets/pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-            <li><a href="<?=base_url()?>assets/pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="<?=base_url()?>assets/#">
-            <i class="fa fa-table"></i> <span>Tables</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="<?=base_url()?>assets/pages/tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-            <li><a href="<?=base_url()?>assets/pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="<?=base_url()?>assets/pages/calendar.html">
-            <i class="fa fa-calendar"></i> <span>Calendar</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-red">3</small>
-              <small class="label pull-right bg-blue">17</small>
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="<?=base_url()?>assets/pages/mailbox/mailbox.html">
-            <i class="fa fa-envelope"></i> <span>Mailbox</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-yellow">12</small>
-              <small class="label pull-right bg-green">16</small>
-              <small class="label pull-right bg-red">5</small>
-            </span>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="<?=base_url()?>assets/#">
-            <i class="fa fa-folder"></i> <span>Examples</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="<?=base_url()?>assets/pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
-            <li><a href="<?=base_url()?>assets/pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
-            <li><a href="<?=base_url()?>assets/pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
-            <li><a href="<?=base_url()?>assets/pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
-            <li><a href="<?=base_url()?>assets/pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
-            <li><a href="<?=base_url()?>assets/pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-            <li><a href="<?=base_url()?>assets/pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-            <li><a href="<?=base_url()?>assets/pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-            <li><a href="<?=base_url()?>assets/pages/examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="<?=base_url()?>assets/#">
-            <i class="fa fa-share"></i> <span>Multilevel</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="<?=base_url()?>assets/#"><i class="fa fa-circle-o"></i> Level One</a></li>
-            <li class="treeview">
-              <a href="<?=base_url()?>assets/#"><i class="fa fa-circle-o"></i> Level One
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="<?=base_url()?>assets/#"><i class="fa fa-circle-o"></i> Level Two</a></li>
-                <li class="treeview">
-                  <a href="<?=base_url()?>assets/#"><i class="fa fa-circle-o"></i> Level Two
-                    <span class="pull-right-container">
-                      <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                  </a>
-                  <ul class="treeview-menu">
-                    <li><a href="<?=base_url()?>assets/#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                    <li><a href="<?=base_url()?>assets/#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li><a href="<?=base_url()?>assets/#"><i class="fa fa-circle-o"></i> Level One</a></li>
-          </ul>
-        </li>
-        <li><a href="<?=base_url()?>assets/https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
-        <li class="header">LABELS</li>
-        <li><a href="<?=base_url()?>assets/#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
-        <li><a href="<?=base_url()?>assets/#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-        <li><a href="<?=base_url()?>assets/#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
-      </ul>
-    </section>
-    <!-- /.sidebar -->
-  </aside>
-
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Dashboard
-        <small>Version 2.0</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="<?=base_url()?>assets/#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Dashboard</li>
-      </ol>
-    </section>
-
-    <!-- Main content -->
-    <section class="content">
-      <!-- Info boxes -->
-      <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">CPU Traffic</span>
-              <span class="info-box-number">90<small>%</small></span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">Likes</span>
-              <span class="info-box-number">41,410</span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-
-        <!-- fix for small devices only -->
-        <div class="clearfix visible-sm-block"></div>
-
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">Sales</span>
-              <span class="info-box-number">760</span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-            <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">New Members</span>
-              <span class="info-box-number">2,000</span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-      </div>
-      <!-- /.row -->
-
-      <div class="row">
-        <div class="col-md-12">
-          <div class="box">
-            <div class="box-header with-border">
-              <h3 class="box-title">Monthly Recap Report</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <div class="btn-group">
-                  <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown">
-                    <i class="fa fa-wrench"></i></button>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="<?=base_url()?>assets/#">Action</a></li>
-                    <li><a href="<?=base_url()?>assets/#">Another action</a></li>
-                    <li><a href="<?=base_url()?>assets/#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="<?=base_url()?>assets/#">Separated link</a></li>
-                  </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="users">
+                    <div class="users-list">
+                        <h5 class="sidebar-title">On-line</h5>
+                        <ul class="media-list">
+                            <li class="media">
+                                <a href="#">
+                                    <i class="fa fa-circle status-online"></i>
+                                    <img alt="..." src="assets/images/avatar-2.jpg" class="media-object">
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Nicole Bell</h4>
+                                        <span> Content Designer </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="media">
+                                <a href="#">
+                                    <div class="user-label">
+                                        <span class="label label-success">3</span>
+                                    </div>
+                                    <i class="fa fa-circle status-online"></i>
+                                    <img alt="..." src="assets/images/avatar-3.jpg" class="media-object">
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Steven Thompson</h4>
+                                        <span> Visual Designer </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="media">
+                                <a href="#">
+                                    <i class="fa fa-circle status-online"></i>
+                                    <img alt="..." src="assets/images/avatar-4.jpg" class="media-object">
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Ella Patterson</h4>
+                                        <span> Web Editor </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="media">
+                                <a href="#">
+                                    <i class="fa fa-circle status-online"></i>
+                                    <img alt="..." src="assets/images/avatar-5.jpg" class="media-object">
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Kenneth Ross</h4>
+                                        <span> Senior Designer </span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <h5 class="sidebar-title">Off-line</h5>
+                        <ul class="media-list">
+                            <li class="media">
+                                <a href="#">
+                                    <img alt="..." src="assets/images/avatar-6.jpg" class="media-object">
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Nicole Bell</h4>
+                                        <span> Content Designer </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="media">
+                                <a href="#">
+                                    <div class="user-label">
+                                        <span class="label label-success">3</span>
+                                    </div>
+                                    <img alt="..." src="assets/images/avatar-7.jpg" class="media-object">
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Steven Thompson</h4>
+                                        <span> Visual Designer </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="media">
+                                <a href="#">
+                                    <img alt="..." src="assets/images/avatar-8.jpg" class="media-object">
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Ella Patterson</h4>
+                                        <span> Web Editor </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="media">
+                                <a href="#">
+                                    <img alt="..." src="assets/images/avatar-9.jpg" class="media-object">
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Kenneth Ross</h4>
+                                        <span> Senior Designer </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="media">
+                                <a href="#">
+                                    <img alt="..." src="assets/images/avatar-10.jpg" class="media-object">
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Ella Patterson</h4>
+                                        <span> Web Editor </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="media">
+                                <a href="#">
+                                    <img alt="..." src="assets/images/avatar-5.jpg" class="media-object">
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Kenneth Ross</h4>
+                                        <span> Senior Designer </span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="user-chat">
+                        <div class="sidebar-content">
+                            <a class="sidebar-back" href="#"><i class="fa fa-chevron-circle-left"></i> Back</a>
+                        </div>
+                        <div class="user-chat-form sidebar-content">
+                            <div class="input-group">
+                                <input type="text" placeholder="Type a message here..." class="form-control">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-success" type="button">
+                                    <i class="fa fa-chevron-right"></i>
+                                </button>
+                                </div>
+                            </div>
+                        </div>
+                        <ol class="discussion sidebar-content">
+                            <li class="other">
+                                <div class="avatar">
+                                    <img src="assets/images/avatar-4.jpg" alt="">
+                                </div>
+                                <div class="messages">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                    </p>
+                                    <span class="time"> 51 min </span>
+                                </div>
+                            </li>
+                            <li class="self">
+                                <div class="avatar">
+                                    <img src="assets/images/avatar-1.jpg" alt="">
+                                </div>
+                                <div class="messages">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                    </p>
+                                    <span class="time"> 37 mins </span>
+                                </div>
+                            </li>
+                            <li class="other">
+                                <div class="avatar">
+                                    <img src="assets/images/avatar-4.jpg" alt="">
+                                </div>
+                                <div class="messages">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                    </p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
                 </div>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <div class="row">
-                <div class="col-md-8">
-                  <p class="text-center">
-                    <strong>Sales: 1 Jan, 2014 - 30 Jul, 2014</strong>
-                  </p>
-
-                  <div class="chart">
-                    <!-- Sales Chart Canvas -->
-                    <canvas id="salesChart" style="height: 180px;"></canvas>
-                  </div>
-                  <!-- /.chart-responsive -->
+                <div class="tab-pane" id="favorites">
+                    <div class="users-list">
+                        <h5 class="sidebar-title">Favorites</h5>
+                        <ul class="media-list">
+                            <li class="media">
+                                <a href="#">
+                                    <img alt="..." src="assets/images/avatar-7.jpg" class="media-object">
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Nicole Bell</h4>
+                                        <span> Content Designer </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="media">
+                                <a href="#">
+                                    <div class="user-label">
+                                        <span class="label label-success">3</span>
+                                    </div>
+                                    <img alt="..." src="assets/images/avatar-6.jpg" class="media-object">
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Steven Thompson</h4>
+                                        <span> Visual Designer </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="media">
+                                <a href="#">
+                                    <img alt="..." src="assets/images/avatar-10.jpg" class="media-object">
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Ella Patterson</h4>
+                                        <span> Web Editor </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="media">
+                                <a href="#">
+                                    <img alt="..." src="assets/images/avatar-2.jpg" class="media-object">
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Kenneth Ross</h4>
+                                        <span> Senior Designer </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="media">
+                                <a href="#">
+                                    <img alt="..." src="assets/images/avatar-4.jpg" class="media-object">
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Ella Patterson</h4>
+                                        <span> Web Editor </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="media">
+                                <a href="#">
+                                    <img alt="..." src="assets/images/avatar-5.jpg" class="media-object">
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Kenneth Ross</h4>
+                                        <span> Senior Designer </span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="user-chat">
+                        <div class="sidebar-content">
+                            <a class="sidebar-back" href="#"><i class="fa fa-chevron-circle-left"></i> Back</a>
+                        </div>
+                        <ol class="discussion sidebar-content">
+                            <li class="other">
+                                <div class="avatar">
+                                    <img src="assets/images/avatar-4.jpg" alt="">
+                                </div>
+                                <div class="messages">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                    </p>
+                                    <span class="time"> 51 min </span>
+                                </div>
+                            </li>
+                            <li class="self">
+                                <div class="avatar">
+                                    <img src="assets/images/avatar-1.jpg" alt="">
+                                </div>
+                                <div class="messages">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                    </p>
+                                    <span class="time"> 37 mins </span>
+                                </div>
+                            </li>
+                            <li class="other">
+                                <div class="avatar">
+                                    <img src="assets/images/avatar-4.jpg" alt="">
+                                </div>
+                                <div class="messages">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                    </p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
                 </div>
-                <!-- /.col -->
-                <div class="col-md-4">
-                  <p class="text-center">
-                    <strong>Goal Completion</strong>
-                  </p>
-
-                  <div class="progress-group">
-                    <span class="progress-text">Add Products to Cart</span>
-                    <span class="progress-number"><b>160</b>/200</span>
-
-                    <div class="progress sm">
-                      <div class="progress-bar progress-bar-aqua" style="width: 80%"></div>
-                    </div>
-                  </div>
-                  <!-- /.progress-group -->
-                  <div class="progress-group">
-                    <span class="progress-text">Complete Purchase</span>
-                    <span class="progress-number"><b>310</b>/400</span>
-
-                    <div class="progress sm">
-                      <div class="progress-bar progress-bar-red" style="width: 80%"></div>
-                    </div>
-                  </div>
-                  <!-- /.progress-group -->
-                  <div class="progress-group">
-                    <span class="progress-text">Visit Premium Page</span>
-                    <span class="progress-number"><b>480</b>/800</span>
-
-                    <div class="progress sm">
-                      <div class="progress-bar progress-bar-green" style="width: 80%"></div>
-                    </div>
-                  </div>
-                  <!-- /.progress-group -->
-                  <div class="progress-group">
-                    <span class="progress-text">Send Inquiries</span>
-                    <span class="progress-number"><b>250</b>/500</span>
-
-                    <div class="progress sm">
-                      <div class="progress-bar progress-bar-yellow" style="width: 80%"></div>
-                    </div>
-                  </div>
-                  <!-- /.progress-group -->
-                </div>
-                <!-- /.col -->
-              </div>
-              <!-- /.row -->
-            </div>
-            <!-- ./box-body -->
-            <div class="box-footer">
-              <div class="row">
-                <div class="col-sm-3 col-xs-6">
-                  <div class="description-block border-right">
-                    <span class="description-percentage text-green"><i class="fa fa-caret-up"></i> 17%</span>
-                    <h5 class="description-header">$35,210.43</h5>
-                    <span class="description-text">TOTAL REVENUE</span>
-                  </div>
-                  <!-- /.description-block -->
-                </div>
-                <!-- /.col -->
-                <div class="col-sm-3 col-xs-6">
-                  <div class="description-block border-right">
-                    <span class="description-percentage text-yellow"><i class="fa fa-caret-left"></i> 0%</span>
-                    <h5 class="description-header">$10,390.90</h5>
-                    <span class="description-text">TOTAL COST</span>
-                  </div>
-                  <!-- /.description-block -->
-                </div>
-                <!-- /.col -->
-                <div class="col-sm-3 col-xs-6">
-                  <div class="description-block border-right">
-                    <span class="description-percentage text-green"><i class="fa fa-caret-up"></i> 20%</span>
-                    <h5 class="description-header">$24,813.53</h5>
-                    <span class="description-text">TOTAL PROFIT</span>
-                  </div>
-                  <!-- /.description-block -->
-                </div>
-                <!-- /.col -->
-                <div class="col-sm-3 col-xs-6">
-                  <div class="description-block">
-                    <span class="description-percentage text-red"><i class="fa fa-caret-down"></i> 18%</span>
-                    <h5 class="description-header">1200</h5>
-                    <span class="description-text">GOAL COMPLETIONS</span>
-                  </div>
-                  <!-- /.description-block -->
-                </div>
-              </div>
-              <!-- /.row -->
-            </div>
-            <!-- /.box-footer -->
-          </div>
-          <!-- /.box -->
-        </div>
-        <!-- /.col -->
-      </div>
-      <!-- /.row -->
-
-      <!-- Main row -->
-      <div class="row">
-        <!-- Left col -->
-        <div class="col-md-8">
-          <!-- MAP & BOX PANE -->
-          <div class="box box-success">
-            <div class="box-header with-border">
-              <h3 class="box-title">Visitors Report</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body no-padding">
-              <div class="row">
-                <div class="col-md-9 col-sm-8">
-                  <div class="pad">
-                    <!-- Map will be created here -->
-                    <div id="world-map-markers" style="height: 325px;"></div>
-                  </div>
-                </div>
-                <!-- /.col -->
-                <div class="col-md-3 col-sm-4">
-                  <div class="pad box-pane-right bg-green" style="min-height: 280px">
-                    <div class="description-block margin-bottom">
-                      <div class="sparkbar pad" data-color="#fff">90,70,90,70,75,80,70</div>
-                      <h5 class="description-header">8390</h5>
-                      <span class="description-text">Visits</span>
-                    </div>
-                    <!-- /.description-block -->
-                    <div class="description-block margin-bottom">
-                      <div class="sparkbar pad" data-color="#fff">90,50,90,70,61,83,63</div>
-                      <h5 class="description-header">30%</h5>
-                      <span class="description-text">Referrals</span>
-                    </div>
-                    <!-- /.description-block -->
-                    <div class="description-block">
-                      <div class="sparkbar pad" data-color="#fff">90,50,90,70,61,83,63</div>
-                      <h5 class="description-header">70%</h5>
-                      <span class="description-text">Organic</span>
-                    </div>
-                    <!-- /.description-block -->
-                  </div>
-                </div>
-                <!-- /.col -->
-              </div>
-              <!-- /.row -->
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-          <div class="row">
-            <div class="col-md-6">
-              <!-- DIRECT CHAT -->
-              <div class="box box-warning direct-chat direct-chat-warning">
-                <div class="box-header with-border">
-                  <h3 class="box-title">Direct Chat</h3>
-
-                  <div class="box-tools pull-right">
-                    <span data-toggle="tooltip" title="3 New Messages" class="badge bg-yellow">3</span>
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                    </button>
-                    <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="Contacts"
-                            data-widget="chat-pane-toggle">
-                      <i class="fa fa-comments"></i></button>
-                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
-                    </button>
-                  </div>
-                </div>
-                <!-- /.box-header -->
-                <div class="box-body">
-                  <!-- Conversations are loaded here -->
-                  <div class="direct-chat-messages">
-                    <!-- Message. Default to the left -->
-                    <div class="direct-chat-msg">
-                      <div class="direct-chat-info clearfix">
-                        <span class="direct-chat-name pull-left">Alexander Pierce</span>
-                        <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
-                      </div>
-                      <!-- /.direct-chat-info -->
-                      <img class="direct-chat-img" src="<?=base_url()?>assets/dist/img/user1-128x128.jpg" alt="message user image">
-                      <!-- /.direct-chat-img -->
-                      <div class="direct-chat-text">
-                        Is this template really for free? That's unbelievable!
-                      </div>
-                      <!-- /.direct-chat-text -->
-                    </div>
-                    <!-- /.direct-chat-msg -->
-
-                    <!-- Message to the right -->
-                    <div class="direct-chat-msg right">
-                      <div class="direct-chat-info clearfix">
-                        <span class="direct-chat-name pull-right">Sarah Bullock</span>
-                        <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
-                      </div>
-                      <!-- /.direct-chat-info -->
-                      <img class="direct-chat-img" src="<?=base_url()?>assets/dist/img/user3-128x128.jpg" alt="message user image">
-                      <!-- /.direct-chat-img -->
-                      <div class="direct-chat-text">
-                        You better believe it!
-                      </div>
-                      <!-- /.direct-chat-text -->
-                    </div>
-                    <!-- /.direct-chat-msg -->
-
-                    <!-- Message. Default to the left -->
-                    <div class="direct-chat-msg">
-                      <div class="direct-chat-info clearfix">
-                        <span class="direct-chat-name pull-left">Alexander Pierce</span>
-                        <span class="direct-chat-timestamp pull-right">23 Jan 5:37 pm</span>
-                      </div>
-                      <!-- /.direct-chat-info -->
-                      <img class="direct-chat-img" src="<?=base_url()?>assets/dist/img/user1-128x128.jpg" alt="message user image">
-                      <!-- /.direct-chat-img -->
-                      <div class="direct-chat-text">
-                        Working with AdminLTE on a great new app! Wanna join?
-                      </div>
-                      <!-- /.direct-chat-text -->
-                    </div>
-                    <!-- /.direct-chat-msg -->
-
-                    <!-- Message to the right -->
-                    <div class="direct-chat-msg right">
-                      <div class="direct-chat-info clearfix">
-                        <span class="direct-chat-name pull-right">Sarah Bullock</span>
-                        <span class="direct-chat-timestamp pull-left">23 Jan 6:10 pm</span>
-                      </div>
-                      <!-- /.direct-chat-info -->
-                      <img class="direct-chat-img" src="<?=base_url()?>assets/dist/img/user3-128x128.jpg" alt="message user image">
-                      <!-- /.direct-chat-img -->
-                      <div class="direct-chat-text">
-                        I would love to.
-                      </div>
-                      <!-- /.direct-chat-text -->
-                    </div>
-                    <!-- /.direct-chat-msg -->
-
-                  </div>
-                  <!--/.direct-chat-messages-->
-
-                  <!-- Contacts are loaded here -->
-                  <div class="direct-chat-contacts">
-                    <ul class="contacts-list">
-                      <li>
-                        <a href="<?=base_url()?>assets/#">
-                          <img class="contacts-list-img" src="<?=base_url()?>assets/dist/img/user1-128x128.jpg" alt="User Image">
-
-                          <div class="contacts-list-info">
-                                <span class="contacts-list-name">
-                                  Count Dracula
-                                  <small class="contacts-list-date pull-right">2/28/2015</small>
-                                </span>
-                            <span class="contacts-list-msg">How have you been? I was...</span>
-                          </div>
-                          <!-- /.contacts-list-info -->
-                        </a>
-                      </li>
-                      <!-- End Contact Item -->
-                      <li>
-                        <a href="<?=base_url()?>assets/#">
-                          <img class="contacts-list-img" src="<?=base_url()?>assets/dist/img/user7-128x128.jpg" alt="User Image">
-
-                          <div class="contacts-list-info">
-                                <span class="contacts-list-name">
-                                  Sarah Doe
-                                  <small class="contacts-list-date pull-right">2/23/2015</small>
-                                </span>
-                            <span class="contacts-list-msg">I will be waiting for...</span>
-                          </div>
-                          <!-- /.contacts-list-info -->
-                        </a>
-                      </li>
-                      <!-- End Contact Item -->
-                      <li>
-                        <a href="<?=base_url()?>assets/#">
-                          <img class="contacts-list-img" src="<?=base_url()?>assets/dist/img/user3-128x128.jpg" alt="User Image">
-
-                          <div class="contacts-list-info">
-                                <span class="contacts-list-name">
-                                  Nadia Jolie
-                                  <small class="contacts-list-date pull-right">2/20/2015</small>
-                                </span>
-                            <span class="contacts-list-msg">I'll call you back at...</span>
-                          </div>
-                          <!-- /.contacts-list-info -->
-                        </a>
-                      </li>
-                      <!-- End Contact Item -->
-                      <li>
-                        <a href="<?=base_url()?>assets/#">
-                          <img class="contacts-list-img" src="<?=base_url()?>assets/dist/img/user5-128x128.jpg" alt="User Image">
-
-                          <div class="contacts-list-info">
-                                <span class="contacts-list-name">
-                                  Nora S. Vans
-                                  <small class="contacts-list-date pull-right">2/10/2015</small>
-                                </span>
-                            <span class="contacts-list-msg">Where is your new...</span>
-                          </div>
-                          <!-- /.contacts-list-info -->
-                        </a>
-                      </li>
-                      <!-- End Contact Item -->
-                      <li>
-                        <a href="<?=base_url()?>assets/#">
-                          <img class="contacts-list-img" src="<?=base_url()?>assets/dist/img/user6-128x128.jpg" alt="User Image">
-
-                          <div class="contacts-list-info">
-                                <span class="contacts-list-name">
-                                  John K.
-                                  <small class="contacts-list-date pull-right">1/27/2015</small>
-                                </span>
-                            <span class="contacts-list-msg">Can I take a look at...</span>
-                          </div>
-                          <!-- /.contacts-list-info -->
-                        </a>
-                      </li>
-                      <!-- End Contact Item -->
-                      <li>
-                        <a href="<?=base_url()?>assets/#">
-                          <img class="contacts-list-img" src="<?=base_url()?>assets/dist/img/user8-128x128.jpg" alt="User Image">
-
-                          <div class="contacts-list-info">
-                                <span class="contacts-list-name">
-                                  Kenneth M.
-                                  <small class="contacts-list-date pull-right">1/4/2015</small>
-                                </span>
-                            <span class="contacts-list-msg">Never mind I found...</span>
-                          </div>
-                          <!-- /.contacts-list-info -->
-                        </a>
-                      </li>
-                      <!-- End Contact Item -->
+                <div class="tab-pane" id="settings">
+                    <h5 class="sidebar-title">General Settings</h5>
+                    <ul class="media-list">
+                        <li class="media">
+                            <div class="checkbox sidebar-content">
+                                <label>
+                                <input type="checkbox" value="" class="green" checked="checked">
+                                Enable Notifications
+                            </label>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="checkbox sidebar-content">
+                                <label>
+                                <input type="checkbox" value="" class="green" checked="checked">
+                                Show your E-mail
+                            </label>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="checkbox sidebar-content">
+                                <label>
+                                <input type="checkbox" value="" class="green">
+                                Show Offline Users
+                            </label>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="checkbox sidebar-content">
+                                <label>
+                                <input type="checkbox" value="" class="green" checked="checked">
+                                E-mail Alerts
+                            </label>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="checkbox sidebar-content">
+                                <label>
+                                <input type="checkbox" value="" class="green">
+                                SMS Alerts
+                            </label>
+                            </div>
+                        </li>
                     </ul>
-                    <!-- /.contatcts-list -->
-                  </div>
-                  <!-- /.direct-chat-pane -->
-                </div>
-                <!-- /.box-body -->
-                <div class="box-footer">
-                  <form action="#" method="post">
-                    <div class="input-group">
-                      <input type="text" name="message" placeholder="Type Message ..." class="form-control">
-                      <span class="input-group-btn">
-                            <button type="button" class="btn btn-warning btn-flat">Send</button>
-                          </span>
+                    <div class="sidebar-content">
+                        <button class="btn btn-success">
+                        <i class="icon-settings"></i> Save Changes
+                    </button>
                     </div>
-                  </form>
                 </div>
-                <!-- /.box-footer-->
-              </div>
-              <!--/.direct-chat -->
             </div>
-            <!-- /.col -->
-
-            <div class="col-md-6">
-              <!-- USERS LIST -->
-              <div class="box box-danger">
-                <div class="box-header with-border">
-                  <h3 class="box-title">Latest Members</h3>
-
-                  <div class="box-tools pull-right">
-                    <span class="label label-danger">8 New Members</span>
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                    </button>
-                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
-                    </button>
-                  </div>
-                </div>
-                <!-- /.box-header -->
-                <div class="box-body no-padding">
-                  <ul class="users-list clearfix">
-                    <li>
-                      <img src="<?=base_url()?>assets/dist/img/user1-128x128.jpg" alt="User Image">
-                      <a class="users-list-name" href="<?=base_url()?>assets/#">Alexander Pierce</a>
-                      <span class="users-list-date">Today</span>
-                    </li>
-                    <li>
-                      <img src="<?=base_url()?>assets/dist/img/user8-128x128.jpg" alt="User Image">
-                      <a class="users-list-name" href="<?=base_url()?>assets/#">Norman</a>
-                      <span class="users-list-date">Yesterday</span>
-                    </li>
-                    <li>
-                      <img src="<?=base_url()?>assets/dist/img/user7-128x128.jpg" alt="User Image">
-                      <a class="users-list-name" href="<?=base_url()?>assets/#">Jane</a>
-                      <span class="users-list-date">12 Jan</span>
-                    </li>
-                    <li>
-                      <img src="<?=base_url()?>assets/dist/img/user6-128x128.jpg" alt="User Image">
-                      <a class="users-list-name" href="<?=base_url()?>assets/#">John</a>
-                      <span class="users-list-date">12 Jan</span>
-                    </li>
-                    <li>
-                      <img src="<?=base_url()?>assets/dist/img/user2-160x160.jpg" alt="User Image">
-                      <a class="users-list-name" href="<?=base_url()?>assets/#">Alexander</a>
-                      <span class="users-list-date">13 Jan</span>
-                    </li>
-                    <li>
-                      <img src="<?=base_url()?>assets/dist/img/user5-128x128.jpg" alt="User Image">
-                      <a class="users-list-name" href="<?=base_url()?>assets/#">Sarah</a>
-                      <span class="users-list-date">14 Jan</span>
-                    </li>
-                    <li>
-                      <img src="<?=base_url()?>assets/dist/img/user4-128x128.jpg" alt="User Image">
-                      <a class="users-list-name" href="<?=base_url()?>assets/#">Nora</a>
-                      <span class="users-list-date">15 Jan</span>
-                    </li>
-                    <li>
-                      <img src="<?=base_url()?>assets/dist/img/user3-128x128.jpg" alt="User Image">
-                      <a class="users-list-name" href="<?=base_url()?>assets/#">Nadia</a>
-                      <span class="users-list-date">15 Jan</span>
-                    </li>
-                  </ul>
-                  <!-- /.users-list -->
-                </div>
-                <!-- /.box-body -->
-                <div class="box-footer text-center">
-                  <a href="<?=base_url()?>assets/javascript:void(0)" class="uppercase">View All Users</a>
-                </div>
-                <!-- /.box-footer -->
-              </div>
-              <!--/.box -->
-            </div>
-            <!-- /.col -->
-          </div>
-          <!-- /.row -->
-
-          <!-- TABLE: LATEST ORDERS -->
-          <div class="box box-info">
-            <div class="box-header with-border">
-              <h3 class="box-title">Latest Orders</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <div class="table-responsive">
-                <table class="table no-margin">
-                  <thead>
-                  <tr>
-                    <th>Order ID</th>
-                    <th>Item</th>
-                    <th>Status</th>
-                    <th>Popularity</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td><a href="<?=base_url()?>assets/pages/examples/invoice.html">OR9842</a></td>
-                    <td>Call of Duty IV</td>
-                    <td><span class="label label-success">Shipped</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="<?=base_url()?>assets/pages/examples/invoice.html">OR1848</a></td>
-                    <td>Samsung Smart TV</td>
-                    <td><span class="label label-warning">Pending</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="<?=base_url()?>assets/pages/examples/invoice.html">OR7429</a></td>
-                    <td>iPhone 6 Plus</td>
-                    <td><span class="label label-danger">Delivered</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="<?=base_url()?>assets/pages/examples/invoice.html">OR7429</a></td>
-                    <td>Samsung Smart TV</td>
-                    <td><span class="label label-info">Processing</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#00c0ef" data-height="20">90,80,-90,70,-61,83,63</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="<?=base_url()?>assets/pages/examples/invoice.html">OR1848</a></td>
-                    <td>Samsung Smart TV</td>
-                    <td><span class="label label-warning">Pending</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#f39c12" data-height="20">90,80,-90,70,61,-83,68</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="<?=base_url()?>assets/pages/examples/invoice.html">OR7429</a></td>
-                    <td>iPhone 6 Plus</td>
-                    <td><span class="label label-danger">Delivered</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#f56954" data-height="20">90,-80,90,70,-61,83,63</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td><a href="<?=base_url()?>assets/pages/examples/invoice.html">OR9842</a></td>
-                    <td>Call of Duty IV</td>
-                    <td><span class="label label-success">Shipped</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
-                    </td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!-- /.table-responsive -->
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer clearfix">
-              <a href="<?=base_url()?>assets/javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Place New Order</a>
-              <a href="<?=base_url()?>assets/javascript:void(0)" class="btn btn-sm btn-default btn-flat pull-right">View All Orders</a>
-            </div>
-            <!-- /.box-footer -->
-          </div>
-          <!-- /.box -->
         </div>
-        <!-- /.col -->
-
-        <div class="col-md-4">
-          <!-- Info Boxes Style 2 -->
-          <div class="info-box bg-yellow">
-            <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">Inventory</span>
-              <span class="info-box-number">5,200</span>
-
-              <div class="progress">
-                <div class="progress-bar" style="width: 50%"></div>
-              </div>
-              <span class="progress-description">
-                    50% Increase in 30 Days
-                  </span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-          <div class="info-box bg-green">
-            <span class="info-box-icon"><i class="ion ion-ios-heart-outline"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">Mentions</span>
-              <span class="info-box-number">92,050</span>
-
-              <div class="progress">
-                <div class="progress-bar" style="width: 20%"></div>
-              </div>
-              <span class="progress-description">
-                    20% Increase in 30 Days
-                  </span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-          <div class="info-box bg-red">
-            <span class="info-box-icon"><i class="ion ion-ios-cloud-download-outline"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">Downloads</span>
-              <span class="info-box-number">114,381</span>
-
-              <div class="progress">
-                <div class="progress-bar" style="width: 70%"></div>
-              </div>
-              <span class="progress-description">
-                    70% Increase in 30 Days
-                  </span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-          <div class="info-box bg-aqua">
-            <span class="info-box-icon"><i class="ion-ios-chatbubble-outline"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">Direct Messages</span>
-              <span class="info-box-number">163,921</span>
-
-              <div class="progress">
-                <div class="progress-bar" style="width: 40%"></div>
-              </div>
-              <span class="progress-description">
-                    40% Increase in 30 Days
-                  </span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-
-          <div class="box box-default">
-            <div class="box-header with-border">
-              <h3 class="box-title">Browser Usage</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+    </div>
+    <!-- end: RIGHT SIDEBAR -->
+    <div id="event-management" class="modal fade" tabindex="-1" data-width="760" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
                 </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <div class="row">
-                <div class="col-md-8">
-                  <div class="chart-responsive">
-                    <canvas id="pieChart" height="150"></canvas>
-                  </div>
-                  <!-- ./chart-responsive -->
+                    <h4 class="modal-title">Event Management</h4>
                 </div>
-                <!-- /.col -->
-                <div class="col-md-4">
-                  <ul class="chart-legend clearfix">
-                    <li><i class="fa fa-circle-o text-red"></i> Chrome</li>
-                    <li><i class="fa fa-circle-o text-green"></i> IE</li>
-                    <li><i class="fa fa-circle-o text-yellow"></i> FireFox</li>
-                    <li><i class="fa fa-circle-o text-aqua"></i> Safari</li>
-                    <li><i class="fa fa-circle-o text-light-blue"></i> Opera</li>
-                    <li><i class="fa fa-circle-o text-gray"></i> Navigator</li>
-                  </ul>
-                </div>
-                <!-- /.col -->
-              </div>
-              <!-- /.row -->
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer no-padding">
-              <ul class="nav nav-pills nav-stacked">
-                <li><a href="<?=base_url()?>assets/#">United States of America
-                  <span class="pull-right text-red"><i class="fa fa-angle-down"></i> 12%</span></a></li>
-                <li><a href="<?=base_url()?>assets/#">India <span class="pull-right text-green"><i class="fa fa-angle-up"></i> 4%</span></a>
-                </li>
-                <li><a href="<?=base_url()?>assets/#">China
-                  <span class="pull-right text-yellow"><i class="fa fa-angle-left"></i> 0%</span></a></li>
-              </ul>
-            </div>
-            <!-- /.footer -->
-          </div>
-          <!-- /.box -->
-
-          <!-- PRODUCT LIST -->
-          <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">Recently Added Products</h3>
-
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-light-grey">
+                    Close
                 </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
+                    <button type="button" class="btn btn-danger remove-event no-display">
+                    <i class='fa fa-trash-o'></i> Delete Event
+                </button>
+                    <button type='submit' class='btn btn-success save-event'>
+                    <i class='fa fa-check'></i> Save
+                </button>
+                </div>
             </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <ul class="products-list product-list-in-box">
-                <li class="item">
-                  <div class="product-img">
-                    <img src="<?=base_url()?>assets/dist/img/default-50x50.gif" alt="Product Image">
-                  </div>
-                  <div class="product-info">
-                    <a href="<?=base_url()?>assets/javascript:void(0)" class="product-title">Samsung TV
-                      <span class="label label-warning pull-right">$1800</span></a>
-                    <span class="product-description">
-                          Samsung 32" 1080p 60Hz LED Smart HDTV.
-                        </span>
-                  </div>
-                </li>
-                <!-- /.item -->
-                <li class="item">
-                  <div class="product-img">
-                    <img src="<?=base_url()?>assets/dist/img/default-50x50.gif" alt="Product Image">
-                  </div>
-                  <div class="product-info">
-                    <a href="<?=base_url()?>assets/javascript:void(0)" class="product-title">Bicycle
-                      <span class="label label-info pull-right">$700</span></a>
-                    <span class="product-description">
-                          26" Mongoose Dolomite Men's 7-speed, Navy Blue.
-                        </span>
-                  </div>
-                </li>
-                <!-- /.item -->
-                <li class="item">
-                  <div class="product-img">
-                    <img src="<?=base_url()?>assets/dist/img/default-50x50.gif" alt="Product Image">
-                  </div>
-                  <div class="product-info">
-                    <a href="<?=base_url()?>assets/javascript:void(0)" class="product-title">Xbox One <span
-                        class="label label-danger pull-right">$350</span></a>
-                    <span class="product-description">
-                          Xbox One Console Bundle with Halo Master Chief Collection.
-                        </span>
-                  </div>
-                </li>
-                <!-- /.item -->
-                <li class="item">
-                  <div class="product-img">
-                    <img src="<?=base_url()?>assets/dist/img/default-50x50.gif" alt="Product Image">
-                  </div>
-                  <div class="product-info">
-                    <a href="<?=base_url()?>assets/javascript:void(0)" class="product-title">PlayStation 4
-                      <span class="label label-success pull-right">$399</span></a>
-                    <span class="product-description">
-                          PlayStation 4 500GB Console (PS4)
-                        </span>
-                  </div>
-                </li>
-                <!-- /.item -->
-              </ul>
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer text-center">
-              <a href="<?=base_url()?>assets/javascript:void(0)" class="uppercase">View All Products</a>
-            </div>
-            <!-- /.box-footer -->
-          </div>
-          <!-- /.box -->
         </div>
-        <!-- /.col -->
-      </div>
-      <!-- /.row -->
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-
-  <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 2.4.13
     </div>
-    <strong>Copyright &copy; 2014-2019 <a href="<?=base_url()?>assets/https://adminlte.io">AdminLTE</a>.</strong> All rights
-    reserved.
-  </footer>
+    <!-- start: MAIN JAVASCRIPTS -->
+    <!--[if lt IE 9]>
+        <script src="<?=base_url()?>assets/bower_components/respond/dest/respond.min.js"></script>
+        <script src="<?=base_url()?>assets/bower_components/Flot/excanvas.min.js"></script>
+        <script src="<?=base_url()?>assets/bower_components/jquery-1.x/dist/jquery.min.js"></script>
+        <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <script type="text/javascript" src="<?=base_url()?>assets/bower_components/jquery/dist/jquery.min.js"></script>
+    <!--<![endif]-->
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Create the tabs -->
-    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-      <li><a href="<?=base_url()?>assets/#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-      <li><a href="<?=base_url()?>assets/#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-    </ul>
-    <!-- Tab panes -->
-    <div class="tab-content">
-      <!-- Home tab content -->
-      <div class="tab-pane" id="control-sidebar-home-tab">
-        <h3 class="control-sidebar-heading">Recent Activity</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="<?=base_url()?>assets/javascript:void(0)">
-              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+    <script type="text/javascript" src="<?=base_url()?>assets/bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="<?=base_url()?>assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?=base_url()?>assets/bower_components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+    <script type="text/javascript" src="<?=base_url()?>assets/bower_components/blockUI/jquery.blockUI.js"></script>
+    <script type="text/javascript" src="<?=base_url()?>assets/bower_components/iCheck/icheck.min.js"></script>
+    <script type="text/javascript" src="<?=base_url()?>assets/bower_components/perfect-scrollbar/js/min/perfect-scrollbar.jquery.min.js"></script>
+    <script type="text/javascript" src="<?=base_url()?>assets/bower_components/jquery.cookie/jquery.cookie.js"></script>
+    <script type="text/javascript" src="<?=base_url()?>assets/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="assets/js/min/main.min.js"></script>
+    <!-- end: MAIN JAVASCRIPTS -->
+    <!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+    <script src="<?=base_url()?>assets/bower_components/Flot/jquery.flot.js"></script>
+    <script src="<?=base_url()?>assets/bower_components/Flot/jquery.flot.pie.js"></script>
+    <script src="<?=base_url()?>assets/bower_components/Flot/jquery.flot.resize.js"></script>
+    <script src="assets/plugin/jquery.sparkline.min.js"></script>
+    <script src="<?=base_url()?>assets/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+    <script src="<?=base_url()?>assets/bower_components/jqueryui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+    <script src="<?=base_url()?>assets/bower_components/moment/min/moment.min.js"></script>
+    <script src="<?=base_url()?>assets/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+    <script src="assets/js/min/index.min.js"></script>
+    <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
 
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+    <script>
+        jQuery(document).ready(function() {
+            Main.init();
+            Index.init();
+        });
+    </script>
 
-                <p>Will be 23 on April 24th</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="<?=base_url()?>assets/javascript:void(0)">
-              <i class="menu-icon fa fa-user bg-yellow"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
-
-                <p>New phone +1(800)555-1234</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="<?=base_url()?>assets/javascript:void(0)">
-              <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
-
-                <p>nora@example.com</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="<?=base_url()?>assets/javascript:void(0)">
-              <i class="menu-icon fa fa-file-code-o bg-green"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
-
-                <p>Execution time 5 seconds</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
-
-        <h3 class="control-sidebar-heading">Tasks Progress</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="<?=base_url()?>assets/javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Custom Template Design
-                <span class="label label-danger pull-right">70%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="<?=base_url()?>assets/javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Update Resume
-                <span class="label label-success pull-right">95%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="<?=base_url()?>assets/javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Laravel Integration
-                <span class="label label-warning pull-right">50%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="<?=base_url()?>assets/javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Back End Framework
-                <span class="label label-primary pull-right">68%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
-
-      </div>
-      <!-- /.tab-pane -->
-
-      <!-- Settings tab content -->
-      <div class="tab-pane" id="control-sidebar-settings-tab">
-        <form method="post">
-          <h3 class="control-sidebar-heading">General Settings</h3>
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Report panel usage
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Some information about this general settings option
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Allow mail redirect
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Other sets of options are available
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Expose author name in posts
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Allow the user to show his name in blog posts
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <h3 class="control-sidebar-heading">Chat Settings</h3>
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Show me as online
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Turn off notifications
-              <input type="checkbox" class="pull-right">
-            </label>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Delete chat history
-              <a href="<?=base_url()?>assets/javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
-            </label>
-          </div>
-          <!-- /.form-group -->
-        </form>
-      </div>
-      <!-- /.tab-pane -->
-    </div>
-  </aside>
-  <!-- /.control-sidebar -->
-  <!-- Add the sidebar's background. This div must be placed
-       immediately after the control sidebar -->
-  <div class="control-sidebar-bg"></div>
-
-</div>
-<!-- ./wrapper -->
-
-<!-- jQuery 3 -->
-<script src="<?=base_url()?>assets/bower_components/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="<?=base_url()?>assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- FastClick -->
-<script src="<?=base_url()?>assets/bower_components/fastclick/lib/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="<?=base_url()?>assets/dist/js/adminlte.min.js"></script>
-<!-- Sparkline -->
-<script src="<?=base_url()?>assets/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-<!-- jvectormap  -->
-<script src="<?=base_url()?>assets/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="<?=base_url()?>assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-<!-- SlimScroll -->
-<script src="<?=base_url()?>assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- ChartJS -->
-<script src="<?=base_url()?>assets/bower_components/chart.js/Chart.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="<?=base_url()?>assets/dist/js/pages/dashboard2.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="<?=base_url()?>assets/dist/js/demo.js"></script>
 </body>
+
 </html>

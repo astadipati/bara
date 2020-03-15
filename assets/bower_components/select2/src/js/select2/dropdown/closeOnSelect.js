@@ -21,14 +21,11 @@ define([
     var originalEvent = evt.originalEvent;
 
     // Don't close if the control key is being held
-    if (originalEvent && (originalEvent.ctrlKey || originalEvent.metaKey)) {
+    if (originalEvent && originalEvent.ctrlKey) {
       return;
     }
 
-    this.trigger('close', {
-      originalEvent: originalEvent,
-      originalSelect2Event: evt
-    });
+    this.trigger('close', {});
   };
 
   return CloseOnSelect;

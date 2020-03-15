@@ -126,19 +126,7 @@
                 <label>
                   <input type="checkbox" id="locale"> locale (with example settings)
                 </label>
-                <label id="rtl-wrap">
-                  <input type="checkbox" id="rtl"> RTL (right-to-left)
-                </label>
               </div>
-
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" id="alwaysShowCalendars"> alwaysShowCalendars
-                </label>
-              </div>
-
-            </div>
-            <div class="col-md-4">
 
               <div class="checkbox">
                 <label>
@@ -154,9 +142,12 @@
 
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" id="showCustomRangeLabel" checked="checked"> showCustomRangeLabel
+                  <input type="checkbox" id="alwaysShowCalendars"> alwaysShowCalendars
                 </label>
               </div>
+
+            </div>
+            <div class="col-md-4">
 
               <div class="form-group">
                 <label for="opens">opens</label>
@@ -296,9 +287,7 @@
           }
 
           if ($('#locale').is(':checked')) {
-            $('#rtl-wrap').show();
             options.locale = {
-              direction: $('#rtl').is(':checked') ? 'rtl' : 'ltr',
               format: 'MM/DD/YYYY HH:mm',
               separator: ' - ',
               applyLabel: 'Apply',
@@ -310,8 +299,6 @@
               monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
               firstDay: 1
             };
-          } else {
-            $('#rtl-wrap').hide();
           }
 
           if (!$('#linkedCalendars').is(':checked'))
@@ -319,9 +306,6 @@
 
           if (!$('#autoUpdateInput').is(':checked'))
             options.autoUpdateInput = false;
-
-          if (!$('#showCustomRangeLabel').is(':checked'))
-            options.showCustomRangeLabel = false;
 
           if ($('#alwaysShowCalendars').is(':checked'))
             options.alwaysShowCalendars = true;

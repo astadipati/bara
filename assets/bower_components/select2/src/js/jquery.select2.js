@@ -3,9 +3,8 @@ define([
   'jquery-mousewheel',
 
   './select2/core',
-  './select2/defaults',
-  './select2/utils'
-], function ($, _, Select2, Defaults, Utils) {
+  './select2/defaults'
+], function ($, _, Select2, Defaults) {
   if ($.fn.select2 == null) {
     // All methods that should return the element
     var thisMethods = ['open', 'close', 'destroy'];
@@ -23,10 +22,9 @@ define([
         return this;
       } else if (typeof options === 'string') {
         var ret;
-        var args = Array.prototype.slice.call(arguments, 1);
 
         this.each(function () {
-          var instance = Utils.GetData(this, 'select2');
+          var instance = $(this).data('select2');
 
           if (instance == null && window.console && console.error) {
             console.error(
@@ -34,6 +32,8 @@ define([
               'element that is not using Select2.'
             );
           }
+
+          var args = Array.prototype.slice.call(arguments, 1);
 
           ret = instance[options].apply(instance, args);
         });

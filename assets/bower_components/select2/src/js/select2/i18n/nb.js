@@ -1,9 +1,6 @@
 define(function () {
   // Norwegian (Bokmål)
   return {
-    errorLoading: function () {
-      return 'Kunne ikke hente resultater.';
-    },
     inputTooLong: function (args) {
       var overChars = args.input.length - args.maximum;
 
@@ -12,7 +9,15 @@ define(function () {
     inputTooShort: function (args) {
       var remainingChars = args.minimum - args.input.length;
 
-      return 'Vennligst skriv inn ' + remainingChars + ' tegn til';
+      var message = 'Vennligst skriv inn ';
+
+      if (remainingChars > 1) {
+        message += ' flere tegn';
+      } else {
+        message += ' tegn til';
+      }
+
+      return message;
     },
     loadingMore: function () {
       return 'Laster flere resultater…';
@@ -25,9 +30,6 @@ define(function () {
     },
     searching: function () {
       return 'Søker…';
-    },
-    removeAllItems: function () {
-      return 'Fjern alle elementer';
     }
   };
 });
