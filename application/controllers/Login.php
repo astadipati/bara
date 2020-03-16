@@ -8,7 +8,7 @@ class Login extends CI_Controller {
 	}
 
 	public function signin(){
-		// sudah_login();
+		sudah_login();
 		$this->load->model('m_user','mymodel');
 		$sessid = '';
 		while (strlen($sessid) < 32)
@@ -32,9 +32,9 @@ class Login extends CI_Controller {
 		$this->form_validation->set_message('required', 'Masukan %s');
 
 		if ($this->form_validation->run() == FALSE) {
-			// $this->load->view('login/login');
+			$this->load->view('login/login');
             // echo "gagal";
-            redirect('login');
+            // redirect('login');
 		}
 		else{
 		  $h = $q->row_array();
@@ -46,7 +46,7 @@ class Login extends CI_Controller {
 			  $query = $q->result();
 				$user = array(
 				'userid' => $query[0]->userid,
-				'nama_user' => $query[0]->nama_user,
+				'username' => $query[0]->username,
 				'fullname' => $query[0]->fullname,
 				'group_name' => $query[0]->group_name,
 				'group_id' => $query[0]->group_id,
@@ -56,13 +56,13 @@ class Login extends CI_Controller {
 				'user_agent'	=> substr($this->input->user_agent(), 0, 120),
 				'last_activity'	=> time(),
 			);
-			$this->session->set_userdata($user);
-			redirect('/dashboard');
+            $this->session->set_userdata($user);
+            echo "<script> alert('Login Berhasil');
+			window.location='".site_url('dashboard')."'</script>";
 		  }
 		  else{
-			  $this->form_validation->set_message('validateUser', 'Username atau password salah');
-			  $this->session->set_flashdata('error_msg', '<div class="alert alert-danger text-center">Password salah</div>');
-			  $this->load->view('login');
+			echo "<script> alert('Login Gagal');
+				window.location='".site_url('login')."'</script>";
 		  }
 			
 	  }

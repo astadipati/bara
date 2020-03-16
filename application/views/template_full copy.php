@@ -396,7 +396,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="login_example1.html">
+                                    <a href="<?=site_url('login/logout')?>">
                                         <i class="clip-exit"></i> &nbsp;Log Out
                                     </a>
                                 </li>
@@ -430,7 +430,7 @@
                 <ul class="main-navigation-menu">
                     <li>
                         <!--active open-->
-                        <a href="index.html">
+                        <a href="<?=site_url('dashboard')?>">
                             <i class="clip-home-3"></i>
                             <span class="title"> Dashboard </span><span class="selected"></span>
                         </a>
@@ -997,11 +997,11 @@
                                 </div>
                                 <div style="height:25px;line-height:25px; text-align: center">
                                     <a class="clear_style" href="#">
-                Clear Styles
-            </a>
+                                        Clear Styles
+                                    </a>
                                     <a class="save_style" href="#">
-                Save Styles
-            </a>
+                                    Save Styles
+                                    </a>
                                 </div>
                             </div>
                             <div class="style-toggle open">
@@ -1032,7 +1032,7 @@
                             </li>
                         </ol>
                         <div class="page-header">
-                            <h1>Dashboard <small>overview &amp; stats </small></h1>
+                            <h1>Dashboard <small>overview &amp; stats </small> </h1>
                         </div>
                         <!-- end: PAGE TITLE & BREADCRUMB -->
                     </div>

@@ -1,6 +1,6 @@
 <?php
 
-function cek_sudah_login(){
+function sudah_login(){
     $ci =& get_instance();
     $user_session = $ci->session->userdata('userid');
     if($user_session){
@@ -8,13 +8,13 @@ function cek_sudah_login(){
     }
 }
 
-function cek_gak_login(){
+function gak_login(){
     $ci =& get_instance();
     $user_session = $ci->session->userdata('userid');
     if(!$user_session){
-        redirect('auth/login');
+        redirect('login');
     }
-}
+} 
 
 function check_admin(){
     $ci =& get_instance();
